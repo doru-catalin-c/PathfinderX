@@ -1,0 +1,156 @@
+﻿:root {
+    --grid-columns: 1;
+    --grid-rows: 1;
+    --cell-size: 2;
+    --left-menu-distance-left: -6rem;
+    --grid-wall-left: -1px;
+    --grid-wall-top: -1px;
+    --grid-weight-top: 0.1rem;
+    --grid-weight-left: 0.23rem;
+    --grid-weight-width: 85%;
+    --grid-weight-height: 82%;
+
+    --grid-startNode-top: 0.05rem;
+    --grid-startNode-left: 0.04rem;
+    --grid-startNode-width: 85%;
+    --grid-startNode-height: 82%;
+}
+
+/* Grid Style */
+.grid {
+    display: grid;
+    grid-gap: 0;
+    grid-template-rows: repeat(var(--grid-rows), 2rem);
+    grid-template-columns: repeat(var(--grid-columns), 2rem);
+    z-index: -1;
+    background: transparent;
+    position: absolute;
+    width: 75%;
+    height: 75%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -52.5%);
+}
+
+/* Cell Style */
+.cell {
+    width: 100%;
+    height: 100%;
+    background: #F2F2F2;
+    border: 0.1em solid #010638;
+    display: inline-block;
+}
+
+/* =====================================   Grid Responsiveness   ===================================== */
+
+@media only screen and (max-width: 600px) {
+    :root {
+        --grid-wall-left: -0.2px;
+        --grid-wall-top: -0.15px;
+    }
+    .grid {
+        height: 70%;
+        --cell-size: 0.45;
+    }
+    .cell {
+        border: 0.02em solid #010638;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    :root {
+        --grid-wall-left: -1px;
+        --grid-wall-top: -0.6px;
+    }
+
+    .grid {
+        height: 65%;
+        width: 70%;
+        --cell-size: 0.9;
+    }
+    .cell {
+        border: 0.05em solid #010638;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .grid {
+        height: 70%;
+        width: 76%;
+        --cell-size: 1.4;
+    }
+    .cell {
+        border: 0.09em solid #010638;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .grid {
+        width: 75%;
+        height: 72%;
+        --cell-size: 2;
+    }
+
+    .cell {
+        border: 0.1em solid #010638;
+    }
+}
+
+@media only screen and (min-width: 1800px) {
+    .grid {
+        width: 75%;
+        height: 70%;
+        --cell-size: 3;
+    }
+    .cell {
+        border: 0.15em solid #010638;
+    }
+}
+
+@media only screen and (min-width: 3000px) {
+    .grid {
+        width: 75%;
+        height: 70%;
+        --cell-size: 4;
+    }
+
+    .cell {
+        border: 0.2em solid #010638;
+    }
+}
+
+/* ===================================== END Grid Responsiveness ===================================== */
+
+.visited-node-icon {
+    background-color: #1689FC;
+    border-radius: 0;
+}
+
+.visited-node-legend-icon {
+    background-color: #1689FC;
+    width: 1.7rem;
+    height: 1.7rem;
+    padding: 0;
+    border-radius: 0.2rem;
+    display: inline-block;
+    position: relative;
+    left: 0;
+    vertical-align: text-bottom;
+}
+
+.path-node-icon {
+    background-color: #E67A14;
+    border-radius: 2rem;
+}
+
+.path-node-legend-icon {
+    background-color: #E67A14;
+    width: 1.7rem;
+    height: 1.7rem;
+    padding: 0;
+    border-radius: 0.2rem;
+    display: inline-block;
+    position: relative;
+    left: 0;
+    vertical-align: text-bottom;
+}

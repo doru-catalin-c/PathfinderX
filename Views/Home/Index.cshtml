@@ -1,0 +1,504 @@
+﻿<div class="logo-container">
+    <span class="logo"></span>
+    <h1>Pathfinder<span class="title-highlight">X</span></h1>
+</div>
+
+<div id="errorContainer" class="error-container">
+    <p id="errorMessageParagraph">Error</p>
+
+    <svg id="ErrorUnderstoodButton" class="error-understood-button" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle">
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+    </svg>
+</div>
+
+<svg id="leftMenuTogglerTrigger" class="left-menu-toggler-trigger" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="100%" height="100%">
+    <path fill="none" d="M0 0h24v24H0z"/>
+    <path fill="currentColor" d="M12 3c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 14c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0-7c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+</svg>
+
+<div id="leftMenuToggler" class="left-menu-toggler">
+    <svg id="toolboxTrigger" class="toolbox-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="100%" height="100%">
+        <path fill="none" d="M0 0h24v24H0z" />
+        <path fill="currentColor" d="M5.33 3.271a3.5 3.5 0 0 1 4.472 4.474L20.647 18.59l-2.122 2.121L7.68 9.867a3.5 3.5 0 0 1-4.472-4.474L5.444 7.63a1.5 1.5 0 1 0 2.121-2.121L5.329 3.27zm10.367 1.884l3.182-1.768 1.414 1.414-1.768 3.182-1.768.354-2.12 2.121-1.415-1.414 2.121-2.121.354-1.768zm-7.071 7.778l2.121 2.122-4.95 4.95A1.5 1.5 0 0 1 3.58 17.99l.097-.107 4.95-4.95z" />
+    </svg>
+    <svg id="dashboardTrigger" class="dashboard-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+        <path fill="none" d="M0 0h24v24H0z" />
+        <path fill="currentColor" d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z" />
+    </svg>
+</div>
+
+<div id="menu">
+    <a id="home" class="home" href="javascript:void(0);">
+        <span class="home-icon"></span>
+
+        <svg width="100%" height="100%" viewBox="0 0 887 212" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="36" y="30" width="815" height="147" rx="8" fill="white" fill-opacity="0.9" />
+
+            <path class="border-outer-top-line" d="M13 73V15C13 11.6667 15.6781 5 26.3904 5H860.61C865.073 5 874 7 874 15V130" stroke="#010638" stroke-width="10" />
+
+            <path class="border-outer-bottom-line" d="M13.0199 146V189C12.7025 192.333 16.0661 199 32.0591 199H707" stroke="#010638" stroke-width="10" />
+
+            <path class="border-inner-line" d="M374.267 26H46.9864C42.3242 26 33 28.0959 33 36.4795V168.521C33 172.014 35.7973 179 46.9864 179H840.014C844.676 179 854 176.904 854 168.521V36.4795C854 32.9863 851.203 26 840.014 26H542.104" stroke="#010638" stroke-width="8" />
+
+            <g>
+                <circle cx="874" cy="142" r="13" fill="#E67A14" />
+                <circle cx="719" cy="199" r="13" fill="#E67A14" />
+            </g>
+
+            <g>
+                <circle cx="13" cy="134" r="13" fill="#E67A14" />
+                <circle cx="13" cy="85" r="13" fill="#E67A14" />
+            </g>
+
+            <g>
+                <circle cx="530" cy="26" r="13" fill="#E67A14" />
+                <circle cx="386" cy="26" r="13" fill="#E67A14" />
+            </g>
+        </svg>
+
+        <p>Home</p>
+    </a>
+    <a id="algorithms" class="algorithms" href="javascript:void(0);">
+        <span class="algorithms-icon"></span>
+
+        <svg width="100%" height="100%" viewBox="0 0 887 212" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="36" y="30" width="815" height="147" rx="8" fill="white" fill-opacity="0.9" />
+
+            <path class="border-outer-top-line" d="M13 73V15C13 11.6667 15.6781 5 26.3904 5H860.61C865.073 5 874 7 874 15V130" stroke="#010638" stroke-width="10" />
+
+            <path class="border-outer-bottom-line" d="M13.0199 146V189C12.7025 192.333 16.0661 199 32.0591 199H707" stroke="#010638" stroke-width="10" />
+
+            <path class="border-inner-line" d="M374.267 26H46.9864C42.3242 26 33 28.0959 33 36.4795V168.521C33 172.014 35.7973 179 46.9864 179H840.014C844.676 179 854 176.904 854 168.521V36.4795C854 32.9863 851.203 26 840.014 26H542.104" stroke="#010638" stroke-width="8" />
+
+            <g>
+                <circle cx="874" cy="142" r="13" fill="#E67A14" />
+                <circle cx="719" cy="199" r="13" fill="#E67A14" />
+            </g>
+
+            <g>
+                <circle cx="13" cy="134" r="13" fill="#E67A14" />
+                <circle cx="13" cy="85" r="13" fill="#E67A14" />
+            </g>
+
+            <g>
+                <circle cx="530" cy="26" r="13" fill="#E67A14" />
+                <circle cx="386" cy="26" r="13" fill="#E67A14" />
+            </g>
+        </svg>
+
+        <p>Algorithms</p>
+    </a>
+    <a id="patterns" class="patterns" href="javascript:void(0);">
+        <span class="patterns-icon"></span>
+
+        <svg width="100%" height="100%" viewBox="0 0 887 212" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="36" y="30" width="815" height="147" rx="8" fill="white" fill-opacity="0.9" />
+
+            <path class="border-outer-top-line" d="M13 73V15C13 11.6667 15.6781 5 26.3904 5H860.61C865.073 5 874 7 874 15V130" stroke="#010638" stroke-width="10" />
+
+            <path class="border-outer-bottom-line" d="M13.0199 146V189C12.7025 192.333 16.0661 199 32.0591 199H707" stroke="#010638" stroke-width="10" />
+
+            <path class="border-inner-line" d="M374.267 26H46.9864C42.3242 26 33 28.0959 33 36.4795V168.521C33 172.014 35.7973 179 46.9864 179H840.014C844.676 179 854 176.904 854 168.521V36.4795C854 32.9863 851.203 26 840.014 26H542.104" stroke="#010638" stroke-width="8" />
+
+            <g>
+                <circle cx="874" cy="142" r="13" fill="#E67A14" />
+                <circle cx="719" cy="199" r="13" fill="#E67A14" />
+            </g>
+
+            <g>
+                <circle cx="13" cy="134" r="13" fill="#E67A14" />
+                <circle cx="13" cy="85" r="13" fill="#E67A14" />
+            </g>
+
+            <g>
+                <circle cx="530" cy="26" r="13" fill="#E67A14" />
+                <circle cx="386" cy="26" r="13" fill="#E67A14" />
+            </g>
+        </svg>
+
+        <p>Patterns</p>
+    </a>
+    <a id="credits" class="credits" href="javascript:void(0);">
+        <span class="credits-icon"></span>
+
+        <svg width="100%" height="100%" viewBox="0 0 887 212" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="36" y="30" width="815" height="147" rx="8" fill="white" fill-opacity="0.9" />
+
+            <path class="border-outer-top-line" d="M13 73V15C13 11.6667 15.6781 5 26.3904 5H860.61C865.073 5 874 7 874 15V130" stroke="#010638" stroke-width="10" />
+
+            <path class="border-outer-bottom-line" d="M13.0199 146V189C12.7025 192.333 16.0661 199 32.0591 199H707" stroke="#010638" stroke-width="10" />
+
+            <path class="border-inner-line" d="M374.267 26H46.9864C42.3242 26 33 28.0959 33 36.4795V168.521C33 172.014 35.7973 179 46.9864 179H840.014C844.676 179 854 176.904 854 168.521V36.4795C854 32.9863 851.203 26 840.014 26H542.104" stroke="#010638" stroke-width="8" />
+
+            <g>
+                <circle cx="874" cy="142" r="13" fill="#E67A14" />
+                <circle cx="719" cy="199" r="13" fill="#E67A14" />
+            </g>
+
+            <g>
+                <circle cx="13" cy="134" r="13" fill="#E67A14" />
+                <circle cx="13" cy="85" r="13" fill="#E67A14" />
+            </g>
+
+            <g>
+                <circle cx="530" cy="26" r="13" fill="#E67A14" />
+                <circle cx="386" cy="26" r="13" fill="#E67A14" />
+            </g>
+        </svg>
+
+        <p>Credits</p>
+    </a>
+</div>
+
+<div id="dashboard">
+    <a id="run" class="run" href="javascript:void(0);">
+        <span class="run-icon icon-highlight"></span>
+
+        <svg width="100%" height="100%" viewBox="0 0 887 212" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="36" y="30" width="815" height="147" rx="8" fill="white" fill-opacity="0.9" />
+
+            <path class="border-outer-top-line" d="M13 73V15C13 11.6667 15.6781 5 26.3904 5H860.61C865.073 5 874 7 874 15V130" stroke="#010638" stroke-width="10" />
+
+            <path class="border-outer-bottom-line" d="M13.0199 146V189C12.7025 192.333 16.0661 199 32.0591 199H707" stroke="#010638" stroke-width="10" />
+
+            <path class="border-inner-line" d="M374.267 26H46.9864C42.3242 26 33 28.0959 33 36.4795V168.521C33 172.014 35.7973 179 46.9864 179H840.014C844.676 179 854 176.904 854 168.521V36.4795C854 32.9863 851.203 26 840.014 26H542.104" stroke="#010638" stroke-width="8" />
+
+            <g>
+                <circle cx="874" cy="142" r="13" fill="#E67A14" />
+                <circle cx="719" cy="199" r="13" fill="#E67A14" />
+            </g>
+
+            <g>
+                <circle cx="13" cy="134" r="13" fill="#E67A14" />
+                <circle cx="13" cy="85" r="13" fill="#E67A14" />
+            </g>
+
+            <g>
+                <circle cx="530" cy="26" r="13" fill="#E67A14" />
+                <circle cx="386" cy="26" r="13" fill="#E67A14" />
+            </g>
+        </svg>
+
+        <p>Run</p>
+    </a>
+    <a id="clearBoard" class="clear-board" href="javascript:void(0);">
+        <span class="clear-board-icon icon-highlight"></span>
+
+        <svg width="100%" height="100%" viewBox="0 0 887 212" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="36" y="30" width="815" height="147" rx="8" fill="white" fill-opacity="0.9" />
+
+            <path class="border-outer-top-line" d="M13 73V15C13 11.6667 15.6781 5 26.3904 5H860.61C865.073 5 874 7 874 15V130" stroke="#010638" stroke-width="10" />
+
+            <path class="border-outer-bottom-line" d="M13.0199 146V189C12.7025 192.333 16.0661 199 32.0591 199H707" stroke="#010638" stroke-width="10" />
+
+            <path class="border-inner-line" d="M374.267 26H46.9864C42.3242 26 33 28.0959 33 36.4795V168.521C33 172.014 35.7973 179 46.9864 179H840.014C844.676 179 854 176.904 854 168.521V36.4795C854 32.9863 851.203 26 840.014 26H542.104" stroke="#010638" stroke-width="8" />
+
+            <g>
+                <circle cx="874" cy="142" r="13" fill="#E67A14" />
+                <circle cx="719" cy="199" r="13" fill="#E67A14" />
+            </g>
+
+            <g>
+                <circle cx="13" cy="134" r="13" fill="#E67A14" />
+                <circle cx="13" cy="85" r="13" fill="#E67A14" />
+            </g>
+
+            <g>
+                <circle cx="530" cy="26" r="13" fill="#E67A14" />
+                <circle cx="386" cy="26" r="13" fill="#E67A14" />
+            </g>
+        </svg>
+
+        <p>Clear Board</p>
+    </a>
+    <a id="speed" class="speed" href="javascript:void(0);">
+        <span class="speed-icon icon-highlight"></span>
+
+        <svg width="100%" height="100%" viewBox="0 0 887 212" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="36" y="30" width="815" height="147" rx="8" fill="white" fill-opacity="0.9" />
+
+            <path class="border-outer-top-line" d="M13 73V15C13 11.6667 15.6781 5 26.3904 5H860.61C865.073 5 874 7 874 15V130" stroke="#010638" stroke-width="10" />
+
+            <path class="border-outer-bottom-line" d="M13.0199 146V189C12.7025 192.333 16.0661 199 32.0591 199H707" stroke="#010638" stroke-width="10" />
+
+            <path class="border-inner-line" d="M374.267 26H46.9864C42.3242 26 33 28.0959 33 36.4795V168.521C33 172.014 35.7973 179 46.9864 179H840.014C844.676 179 854 176.904 854 168.521V36.4795C854 32.9863 851.203 26 840.014 26H542.104" stroke="#010638" stroke-width="8" />
+
+            <g>
+                <circle cx="874" cy="142" r="13" fill="#E67A14" />
+                <circle cx="719" cy="199" r="13" fill="#E67A14" />
+            </g>
+
+            <g>
+                <circle cx="13" cy="134" r="13" fill="#E67A14" />
+                <circle cx="13" cy="85" r="13" fill="#E67A14" />
+            </g>
+
+            <g>
+                <circle cx="530" cy="26" r="13" fill="#E67A14" />
+                <circle cx="386" cy="26" r="13" fill="#E67A14" />
+            </g>
+        </svg>
+
+        <p>Set Speed</p>
+    </a>
+    <a id="legend" class="legend" href="javascript:void(0);">
+        <span class="legend-icon icon-highlight"></span>
+
+        <svg width="100%" height="100%" viewBox="0 0 887 212" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="36" y="30" width="815" height="147" rx="8" fill="white" fill-opacity="0.9" />
+
+            <path class="border-outer-top-line" d="M13 73V15C13 11.6667 15.6781 5 26.3904 5H860.61C865.073 5 874 7 874 15V130" stroke="#010638" stroke-width="10" />
+
+            <path class="border-outer-bottom-line" d="M13.0199 146V189C12.7025 192.333 16.0661 199 32.0591 199H707" stroke="#010638" stroke-width="10" />
+
+            <path class="border-inner-line" d="M374.267 26H46.9864C42.3242 26 33 28.0959 33 36.4795V168.521C33 172.014 35.7973 179 46.9864 179H840.014C844.676 179 854 176.904 854 168.521V36.4795C854 32.9863 851.203 26 840.014 26H542.104" stroke="#010638" stroke-width="8" />
+
+            <g>
+                <circle cx="874" cy="142" r="13" fill="#E67A14" />
+                <circle cx="719" cy="199" r="13" fill="#E67A14" />
+            </g>
+
+            <g>
+                <circle cx="13" cy="134" r="13" fill="#E67A14" />
+                <circle cx="13" cy="85" r="13" fill="#E67A14" />
+            </g>
+
+            <g>
+                <circle cx="530" cy="26" r="13" fill="#E67A14" />
+                <circle cx="386" cy="26" r="13" fill="#E67A14" />
+            </g>
+        </svg>
+
+        <p>Legend</p>
+    </a>
+</div>
+
+<div id="toolbox">
+    <a id="wall" class="wall" href="javascript:void(0);">
+        <span class="wall-icon tool-icon"></span>
+
+        <div class="tooltip">
+            <svg width="100%" height="100%" viewBox="0 0 116 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1" y="1" width="98%" height="100%" rx="8" fill="#010638" fill-opacity="0.9" stroke="#E67A14" stroke-width="3" />
+            </svg>
+
+            <span class="tooltip-text">Wall</span>
+        </div>
+    </a>
+    <a id="startNode" class="start-node" href="javascript:void(0);">
+        <span class="start-node-icon tool-icon"></span>
+
+        <div class="tooltip">
+            <svg width="100%" height="100%" viewBox="0 0 116 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1" y="1" width="98%" height="100%" rx="8" fill="#010638" fill-opacity="0.9" stroke="#E67A14" stroke-width="3" />
+            </svg>
+
+            <span class="tooltip-text">Start Node</span>
+        </div>
+    </a>
+    <a id="endNode" class="end-node" href="javascript:void(0);">
+        <span class="end-node-icon tool-icon"></span>
+
+        <div class="tooltip">
+            <svg width="100%" height="100%" viewBox="0 0 116 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1" y="1" width="98%" height="100%" rx="8" fill="#010638" fill-opacity="0.9" stroke="#E67A14" stroke-width="3" />
+            </svg>
+
+            <span class="tooltip-text">End Node</span>
+        </div>
+    </a>
+    <a id="weight" class="weight" href="javascript:void(0);">
+        <span class="weight-icon tool-icon"></span>
+
+        <div class="tooltip">
+            <svg width="100%" height="100%" viewBox="0 0 116 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1" y="1" width="98%" height="100%" rx="8" fill="#010638" fill-opacity="0.9" stroke="#E67A14" stroke-width="3" />
+            </svg>
+
+            <span class="tooltip-text">Weight</span>
+        </div>
+    </a>
+</div>
+
+<div id="setSpeedModal" class="modal">
+    <div id="setSpeedModalContent" class="modal-content">
+        <span id="closeSpeedModal" class="modal-close">&times;</span>
+        <h1>Pick a Speed to Visualize the Algorithm</h1>
+        <ul>
+            <li id="slowSpeedListElement" class="list-element">Slow</li>
+            <li id="normalSpeedListElement" class="list-element">Normal</li>
+            <li id="fastSpeedListElement" class="list-element">Fast</li>
+            <li id="veryFastSpeedListElement" class="list-element">Very Fast</li>
+        </ul>
+        
+        <input id="SetSpeedButton" class="select-algorithm" type="button" value="Select a speed"/>
+    </div>
+</div>
+
+<div id="algorithmsModal" class="modal">
+    <div id="algorithms-modal-content" class="modal-content">
+        <span id="hideAlgorithmsModal" class="modal-close">&times;</span>
+        <h1>Pick an Algorithm to Visualize</h1>
+        <ul>
+            <li id="dijkstraElement" class="list-element">
+                <h2 id="dijkstraListElement">
+                    Dijkstra's Algorithm
+                </h2>
+                <svg id="dijkstraInformation" class="information"><use href="~/Content/Vectors/Information.svg#information" /></svg>
+
+                <div id="dijkstraInformationDropdown" class="dropdown-content">
+                    <p>
+                        <a href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm" target="_blank">Dijkstra's algorithm</a> is a well-known
+                        algorithm for computing the shortest path between two nodes or vertices in a graph.
+                        Developed by Edsger W. Dijkstra during a coffee break in Amsterdam it became the basis for modern,
+                        improved variants such as A*.<br />
+                        This implementation of Dijkstra's Algorithm strategically eliminates unlikely paths through a heuristic approach. Being
+                        a weighted algorithm it uses a Minimum Priority Queue data structure and constantly removes from the queue the node
+                        with the lowest priority until the target node is found.
+                    </p>
+                </div>
+            </li>
+            <li id="bfsElement" class="list-element">
+                <h2 id="bfsListElement">
+                    Breadth-First Search (BFS)
+                </h2>
+                <svg id="bfsInformation" class="information"><use href="~/Content/Vectors/Information.svg#information" /></svg>
+
+                <div id="bfsInformationDropdown" class="dropdown-content">
+                    <p>
+                        <a href="https://en.wikipedia.org/wiki/Breadth-first_search" target="_blank">Breadth-First Search</a> algorithm was
+                        invented by Konrad Zuse in 1945, and later, in 1959 reinvented by Edward F. Moore (maybe you know about his law,
+                        <a href="https://en.wikipedia.org/wiki/Moore%27s_law" target="_blank">Moore's Law</a>) who used it to find the
+                        shortest path in a maze.<br />
+                        Although I could have implemented this recursively, I was rather concerned it would get quite hungry for memory
+                        at one point and would yield no obvious visual difference, as opposed to Depth-First Search which has a obvious
+                        difference between it's recursive and iterative implementation.<br />
+                        Breadth-First Search is not a weighted algorithm. Weights are disabled from the toolbox when this algorithm is selected.
+                    </p>
+                </div>
+            </li>
+            <li id="recursiveDfsElement" class="list-element">
+                <h2 id="recursiveDfsListElement">
+                    Recursive Depth-First Search (DFS)
+                </h2>
+                <svg id="recursiveDfsInformation" class="information"><use href="~/Content/Vectors/Information.svg#information" /></svg>
+
+                <div id="recursiveDfsInformationDropdown" class="dropdown-content">
+                    <p>I choose to implement <a href="https://en.wikipedia.org/wiki/Depth-first_search">Depth-First Search</a> recursively
+                        only because it yields an obviously different search pattern compared to other algorithms which if they were to be
+                        implemented recursively and iteratively, nothing would change except that the recursive implementation would take
+                        more memory so it would be pointless.<br/>
+                        DFS implemented recursively is the only algorithm which does not stop searching when it finds the end node since 
+                        all my attempts to do this caused an infinite recursion and was a nightmare to debug. I may attempt to sort this
+                        out in the future but for now I decided to leave it since it's not really a major issue.
+                    </p>
+                </div>
+            </li>
+            <li id="dfsElement" class="list-element">
+                <h2 id="dfsListElement">
+                    Iterative Depth-First Search (DFS)
+                </h2>
+                <svg id="dfsInformation" class="information"><use href="~/Content/Vectors/Information.svg#information" /></svg>
+
+                <div id="dfsInformationDropdown" class="dropdown-content">
+                    <p>Lorem ipsum...</p>
+                </div>
+            </li>
+            <li id="sampleElement" class="list-element">
+                <h2 id="sampleListElement">
+                    Sample Algorithm
+                </h2>
+                <svg id="sampleInformation" class="information"><use href="~/Content/Vectors/Information.svg#information" /></svg>
+
+                <div id="sampleInformationDropdown" class="dropdown-content">
+                    <p>
+                        <a href="https://en.wikipedia.org/wiki/Pathfinding#Sample_algorithm" target="_blank">Sample Algorithm</a> it's a simple pathfinding algorithm
+                        for tile based maps. It's search pattern is similar to Dijkstra's algorithm but it begins it's search from the End Node as opposed to
+                        Dijkstra's which begins it's search at the Start Node.<br />
+                        That said, the search pattern is the only similarity to Dijkstra's algorithm. Sample algorithm takes a very different approach to find
+                        the shortest path. It starts by assigning to each cell a set of X and Y coordinates and counter variable which is used to track the shortest path
+                        as opposed to Dijkstra's, for example, which begins by assigning the distance to every other node on the grid to infinity except the Start Node's
+                        neighbors which distance gets set to 1.<br />
+                        Sample algorithm is not a weighted algorithm. Weights are disabled from the toolbox when this algorithm is selected.
+                    </p>
+                </div>
+            </li>
+        </ul>
+
+        <input id="selectAlgorithm" class="select-algorithm" type="button" value="Select an Algorithm" />
+    </div>
+</div>
+
+<div id="legendModal" class="modal">
+    <div id="legendModalContent" class="modal-content">
+        <span id="hideLegendModal" class="modal-close">&times;</span>
+        <h1>Legend</h1>
+        <ol>
+            <li>
+                <span class="wall-legend-icon"></span>
+                <h2>Wall</h2>
+                <svg id="wallInformation" class="information"><use href="~/Content/Vectors/Information.svg#information" /></svg>
+
+                <div id="wallInformationDropdown" class="dropdown-content">
+                    <p>A wall will block any algorithm from passing through.</p>
+                </div>
+            </li>
+            <li>
+                <span class="visited-node-legend-icon"></span>
+                <h2>Visited Node</h2>
+                <svg id="visitedNodeInformation" class="information"><use href="~/Content/Vectors/Information.svg#information" /></svg>
+
+                <div id="visitedNodeInformationDropdown" class="dropdown-content">
+                    <p>Marks the nodes visited by the algorithms.</p>
+                </div>
+            </li>
+            <li>
+                <span class="path-node-legend-icon"></span>
+                <h2>Path</h2>
+                <svg id="pathNodeInformation" class="information"><use href="~/Content/Vectors/Information.svg#information" /></svg>
+
+                <div id="pathNodeInformationDropdown" class="dropdown-content">
+                    <p>Marks the path found by the algorithms.</p>
+                </div>
+            </li>
+            <li>
+                <span class="weight-legend-icon"></span>
+                <h2>Weight</h2>
+                <svg id="weightInformation" class="information"><use href="~/Content/Vectors/Information.svg#information" /></svg>
+
+                <div id="weightInformationDropdown" class="dropdown-content">
+                    <p>
+                        Weights are used by weighted algorithms such as Dijkstra's algorithm or A* and their role is to simulate a
+                        block on the path similar to how road works will create delays on high traffic roads, for example.
+                        In this case, the node priority is multiplied by 5.<br />
+                        Weights are only available in the toolbox if the selected algorithm is a weighted algorithm.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <span class="start-node-legend-icon"></span>
+                <h2>Start Node</h2>
+                <svg id="startNodeInformation" class="information"><use href="~/Content/Vectors/Information.svg#information" /></svg>
+
+                <div id="startNodeInformationDropdown" class="dropdown-content">
+                    <p>The node where all the algorithms begin their search. No algorithm can run without this node on the grid.</p>
+                </div>
+            </li>
+            <li>
+                <span class="end-node-legend-icon"></span>
+                <h2>End Node</h2>
+                <svg id="endNodeInformation" class="information"><use href="~/Content/Vectors/Information.svg#information" /></svg>
+
+                <div id="endNodeInformationDropdown" class="dropdown-content">
+                    <p>The node where all the algorithms end their search. No algorithm can run without this node on the grid.</p>
+                </div>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div id="grid" class="grid"></div>
+
+<span class="top-right-hexagon-pattern"></span>
+<span class="bottom-left-hexagon-pattern"></span>

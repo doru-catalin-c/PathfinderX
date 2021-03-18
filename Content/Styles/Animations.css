@@ -1,0 +1,138 @@
+﻿/* Draw Right Menu Container Border Lines */
+@keyframes draw {
+    from {
+        stroke-dashoffset: 2000;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Draw Left Menu Container Border Lines */
+@keyframes draw-left {
+    from {
+        stroke-dashoffset: 200;
+    }
+
+    to {
+        stroke-dashoffset: 2000;
+    }
+}
+
+/* Scales the Tooltip Text */
+@keyframes scale {
+    0% {
+        transform: scale(0) translate(-200%, -200%);
+    }
+
+    100% {
+        transform: scale(1) translate(-52.5%, -52.5%);
+    }
+}
+
+@keyframes scale-wall {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Scales the Tool Icon*/
+@keyframes scale-icon {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Draws the Tooltip Border */
+@keyframes draw-tooltip-border {
+    from {
+        stroke-dashoffset: 300;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Collapses the Toolbox and the Dashboard */
+@keyframes collapse-left {
+    from {
+        left: 0;
+    }    
+    to {
+        left: -3rem;
+    }
+}
+
+/* Expands the Toolbox and the Dashboard */
+@keyframes expand-left {
+    from {
+        left: -3rem;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+/* Animates the shortest path found by Dijksra's Algorithm */
+@keyframes check-node {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+        border-radius: 0;
+    }
+}
+
+/* Animates the nodes visited by Dijksra's Algorithm */
+@keyframes visit-node {
+    0% {
+        transform: scale(0.1);
+        border-radius: 2rem;
+    }
+
+    25% {
+        background-color: #005AEB;
+        transform: scale(0.25);
+        border-radius: 2rem;
+    }
+
+    50% {
+        background-color: #104580;
+        transform: scale(0.5);
+        border-radius: 1.75rem;
+    }
+
+    75% {
+        background-color: #03fcd7;
+        transform: scale(0.75);
+        border-radius: 1.5rem;
+    }
+
+    100% {
+        background-color: #098FDD;
+        transform: scale(1);
+        border-radius: 0;
+    }
+}
+
+@keyframes modal-in {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    to {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+}

@@ -1,0 +1,1187 @@
+﻿@import url(Animations.css);
+
+/* Set Overall Body Style */
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #F2F2F2;
+    font-family: 'Jura', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #14111A;
+    line-height: 1.5;
+    overflow: hidden;
+}
+
+/* Body Container Style */
+.body-container {
+    margin-top: 1em;
+    margin-left: 6.3em;
+    margin-right: 5em;
+}
+
+/* Application logo */
+.logo {
+    background-image: url("../Vectors/Maze Logo.svg");
+    background-repeat: no-repeat;
+    width: 2rem;
+    height: 2rem;
+    display: inline-block;
+    vertical-align: text-bottom;
+    margin: 0;
+    padding: 0;
+}
+
+/* Logo Main Container Style */
+.logo-container {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.5rem;
+    width: 14rem;
+    height: 3rem;
+}
+    .logo-container h1 {
+        position: relative;
+        margin: 0 0 0 0.2rem;
+        padding: 0;
+        font-size: 2rem;    
+        font-family: "Play";
+        font-weight: bold;
+        display: inline-block;
+        color: #010638;
+        user-select: none;
+    }
+
+/* Highlight a Part of the Title */
+.title-highlight {
+    color: #1689FC;
+}
+
+.icon-highlight {
+    border-radius: 0;
+    background-color: transparent;
+}
+
+/* =====================================  Menu  ===================================== */
+#menu a {
+    position: absolute;
+    right: -12.1rem;
+    width: 15rem;
+    height: 2.85rem;
+    font-family: 'Jura', sans-serif;
+    color: #E67A14;
+    text-decoration: none;
+    text-align: center;
+    background-color: transparent;
+    border-radius: 0.6rem 0 0 0.6rem;
+    transition: 0.3s;
+    z-index: 1;
+}
+    #menu a:hover {
+        right: 0;
+    }
+        #menu a:hover .border-outer-top-line {
+            animation: draw 0.8s linear;
+        }
+        #menu a:hover .border-outer-bottom-line {
+            animation: draw 0.8s linear;
+        }
+        #menu a:hover .border-inner-line {
+            animation: draw 0.5s linear;
+        }
+        #menu a:hover .home-icon {
+            border-radius: 1rem;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        #menu a:hover .algorithms-icon {
+            border-radius: 1rem;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        #menu a:hover .patterns-icon {
+            border-radius: 1rem;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        #menu a:hover .credits-icon {
+            border-radius: 1rem;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+    #menu a:active p {
+        color: #E67A14;
+    }
+    #menu a:visited {
+        color: #14111a;
+    }
+    #menu a p {
+        user-select: none;
+        z-index: 1;
+        font-weight: bold;
+        color: #14111a;
+        font-family: 'Play', sans-serif;
+        font-size: 1rem;
+        margin-left: 3rem;
+        margin-block-start: 0.8rem;
+        margin-block-end: 0;
+    }
+
+/* Menu Vectors Style */
+#menu svg {
+    position: absolute;
+    z-index: -1;
+    right: 0.1rem;
+    top: 0.2rem;
+    width: 79%;
+    height: 100%;
+}
+
+/* Home Menu Item Style*/
+.home {
+    top: 20%;
+}
+.home-icon {
+    background-image: url("../Vectors/Home.svg");
+    position: absolute;
+    left: 0.3rem;
+    top: 50%;
+    transform: translateY(-45%);
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+/* Algorighms Menu Item Style */
+.algorithms {
+    top: 30%;
+}
+.algorithms-icon {
+    background-image: url("../Vectors/Algorithms.svg");
+    position: absolute;
+    left: 0.3rem;
+    top: 50%;
+    transform: translateY(-45%);
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+/* Patterns Menu Item Style */
+.patterns {
+    top: 40%;
+}
+.patterns-icon {
+    background-image: url("../Vectors/Patterns.svg");
+    position: absolute;
+    left: 0.3rem;
+    top: 50%;
+    transform: translateY(-45%);
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+/* Credits Menu Item Style */
+.credits {
+    top: 50%;
+}
+.credits-icon {
+    background-image: url("../Vectors/Credits.svg");
+    position: absolute;
+    left: 0.3rem;
+    top: 50%;
+    transform: translateY(-45%);
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+/* Menu Container Border Lines Style*/
+.border-outer-top-line {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 0;
+}
+.border-outer-bottom-line {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 0;
+}
+.border-inner-line {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 0;
+}
+/* ===================================== END Menu ===================================== */
+
+.left-menu-toggler {
+    display: none;
+    position: absolute;
+    top: 2.5rem;
+    left: 0.5rem;
+    width: 1.5rem;
+    height: 3rem;
+    background-color: transparent;
+    z-index: 1;
+}
+
+.toolbox-icon {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 50%;
+    color: #010638;
+    cursor: pointer;
+}
+    .toolbox-icon:hover {
+        color: #E67A14;
+    }
+    .toolbox-icon:active {
+        animation: scale-icon 0.1s linear;
+    }
+
+.dashboard-icon {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    color: #010638;
+    cursor: pointer;
+}
+    .dashboard-icon:hover {
+        color: #E67A14;
+    }
+    .dashboard-icon:active {
+        animation: scale-icon 0.1s linear;
+    }
+
+/* ===================================== Toolbox ===================================== */
+#toolbox {
+    position: absolute;
+    left: var(--left-menu-distance-left);
+    top: 10%;
+    width: 3rem;
+    height: 40%;
+    z-index: 0;
+}
+    #toolbox a {
+        position: absolute;
+        left: 0;
+        width: 2.85rem;
+        height: 2.85rem;
+        font-family: 'Jura', sans-serif;
+        color: #E67A14;
+        text-decoration: none;
+        text-align: center;
+        background-color: transparent;
+        border-radius: 0.6rem 0 0 0.6rem;
+        z-index: 1;
+    }
+        #toolbox a:hover .tooltip .tooltip-text {
+            visibility: visible;
+            animation: scale 0.1s linear;
+        }
+        #toolbox a:hover .tooltip svg {
+            visibility: visible;
+            stroke-dasharray: 300;
+            stroke-dashoffset: 0;
+            animation: draw-tooltip-border 0.5s linear;
+        }
+        #toolbox a:active .tool-icon {
+            animation: scale-icon 0.1s linear;
+        }
+
+.tool-icon {
+    transform: scale(1);
+}
+
+/* Wall Style */
+.wall {
+    top: 25%;
+}
+.wall-icon {
+    background-color: #010638;
+    position: absolute;
+    left: 0.42rem;
+    top: .42rem;
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    border-radius: 0.2rem;
+}
+.wall-legend-icon {
+    background-color: #010638;
+    width: 1.7rem;
+    height: 1.7rem;
+    padding: 0;
+    border-radius: 0.2rem;
+    display: inline-block;
+    position: relative;
+    left: 0;
+    vertical-align: text-bottom;
+}
+
+/* Start Node Style */
+.start-node {
+    top: 50%;
+}
+.start-node-icon {
+    background: url("../Vectors/Start Node.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 0.2rem;
+    top: .26rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    padding: 0;
+}
+.start-node-legend-icon {
+    background: url("../Vectors/Start Node.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 1.7rem;
+    height: 1.7rem;
+    padding: 0;
+    display: inline-block;
+    position: relative;
+    left: 0;
+    vertical-align: text-bottom;
+}
+
+/* End Node Style */
+.end-node {
+    top: 75%;
+}
+.end-node-icon {
+    background: url("../Vectors/End Node.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 0.2rem;
+    top: .26rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    padding: 0;
+}
+.end-node-legend-icon {
+    background: url("../Vectors/End Node.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 1.7rem;
+    height: 1.7rem;
+    padding: 0;
+    display: inline-block;
+    position: relative;
+    left: 0;
+    vertical-align: text-bottom;
+}
+
+
+/* Weight Style */
+.weight {
+    display: block;
+    top:100%;
+}
+.weight-icon {
+    background: url("../Vectors/Lock.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 0.46rem;
+    top: .24rem;
+    width: 1.85rem;
+    height: 2.4rem;
+    padding: 0;
+}
+.weight-legend-icon {
+    background: url("../Vectors/Lock.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 1.35rem;
+    height: 1.9rem;
+    padding: 0;
+    display: inline-block;
+    position: relative;
+    left: 0;
+    margin-left: 0.15rem;
+    vertical-align: text-bottom;
+}
+
+
+/* Tooltip Style */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+    .tooltip svg {
+        visibility: hidden;
+        width: 5rem;
+        height: 2rem;
+        position: absolute;
+        left: 1.5rem;
+        top: -0.65rem;
+    }
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    width: 6rem;
+    height: 1rem;
+    background-color: transparent;
+    color: #f2f2f2;
+    text-align: center;
+    border-radius: 0.2rem;
+    padding-bottom: 0.5rem;
+    position: absolute;
+    left: 1rem;
+    top: -0.1rem;
+    font-size: 0.7rem;
+    z-index: 1;
+}
+/* ===================================== END Toolbox ===================================== */
+
+/* =====================================  Dashboard  ===================================== */
+#dashboard {
+    position: absolute;
+    left: 0;
+    top: 20%;
+    width: 3rem;
+    height: 40%;
+    z-index: 1;
+    background-color: transparent;
+}
+    #dashboard a {
+        position: absolute;
+        left: -12.1rem;
+        width: 15rem;
+        height: 2.85rem;
+        font-family: 'Jura', sans-serif;
+        color: #E67A14;
+        text-decoration: none;
+        text-align: center;
+        background-color: transparent;
+        border-radius: 0.6rem 0 0 0.6rem;
+        transition: 0.3s;
+    }
+        #dashboard a p {
+            z-index: 1;
+            font-weight: bold;
+            color: #14111a;
+            font-family: 'Play', sans-serif;
+            font-size: 1rem;
+            margin-right: 3rem;
+            margin-block-start: 0.8rem;
+            margin-block-end: 0;
+            user-select: none;
+        }
+        #dashboard a:hover {
+            left: 0;
+        }
+            #dashboard a:hover .border-outer-top-line {
+                animation: draw 0.8s linear;
+            }
+            #dashboard a:hover .border-outer-bottom-line {
+                animation: draw 0.8s linear;
+            }
+            #dashboard a:hover .border-inner-line {
+                animation: draw 0.5s linear;
+            }
+            #dashboard a:hover .icon-highlight {
+                border-radius: 1rem;
+                background-color: rgba(255, 255, 255, 0.9);
+            }
+        #dashboard a:active p {
+            color: #E67A14;
+        }
+        #dashboard a:visited {
+            color: #14111a;
+        }
+
+    #dashboard svg {
+        position: absolute;
+        z-index: -1;
+        left: 0.1rem;
+        top: 0.2rem;
+        width: 79%;
+        height: 100%;
+        transform: scale(-1, 1);
+    }
+
+/* Run Icon Style */
+.run {
+    top: 0;
+}
+
+.run-icon {
+    background-image: url("../Vectors/Run.svg");
+    position: absolute;
+    right: 0.3rem;
+    top: 50%;
+    transform: translateY(-45%);
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+/* Clear Board Icon Style*/
+.clear-board {
+    top: 25%;
+}
+
+.clear-board-icon {
+    background-image: url("../Vectors/Clear Board.svg");
+    position: absolute;
+    right: 0.3rem;
+    top: 50%;
+    transform: translateY(-45%);
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+/* Speed Icon Style */
+.speed {
+    top: 50%;
+}
+
+.speed-icon {
+    background-image: url("../Vectors/Speed.svg");
+    position: absolute;
+    right: 0.3rem;
+    top: 50%;
+    transform: translateY(-45%);
+    width: 2.4rem;
+    height: 2.4rem;
+}
+ 
+/* Legend Icon Style */
+.legend {
+    top: 75%;
+}
+
+.legend-icon {
+    background-image: url("../Vectors/Legend.svg");
+    position: absolute;
+    right: 0.3rem;
+    top: 50%;
+    transform: translateY(-45%);
+    width: 2.4rem;
+    height: 2.4rem;
+}
+/* ===================================== END Dashboard ===================================== */
+
+/* Hexagon Patterns Background Detail Style */
+.bottom-left-hexagon-pattern {
+    z-index: -2;
+    width: 37%;
+    height: 35%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: url("../Images/Bottom-Left Hexagon Pattern.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.top-right-hexagon-pattern {
+    z-index: -2;
+    width: 27%;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url("../Images/Top-Right Hexagon Pattern.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* Modal Style */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.4);
+    animation: modal-in 0.3s linear;
+}
+
+/* Modal Content Style*/
+.modal-content {
+    background-color: rgba(242, 242, 242, 0.8);
+    backdrop-filter: blur(0.2rem);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    text-align: center;
+    margin: 5% auto;
+    width: 50%;
+}
+    .modal-content h1 {
+        font-family: 'Play', sans-serif;
+        font-size: 1.5rem;
+        color: #010638;
+        margin: 1rem auto 2rem auto;
+        user-select: none;
+    }
+    .modal-content ul {
+        padding: 0;
+        list-style: none;
+        text-align: left;
+    }
+        .modal-content ul li {
+            margin: 1rem auto;
+            font-weight: bold;
+            width: 80%;
+        }
+            .modal-content ul li h2 {
+                font-size: 1rem;
+                display: inline-block;
+                color: #010638;
+                margin: auto 0 auto 1rem;
+                user-select: none;
+            }
+                .modal-content ul li h2:hover {
+                    color: #005AEB;
+                    cursor: pointer;
+                }
+                .modal-content ul li h2:active {
+                    color: #E67A14;
+                }
+    .modal-content ol {
+        list-style: none;
+        text-align: left;
+        padding: 0;
+    }
+        .modal-content ol li {
+            margin: 1rem auto;
+            width: 60%;
+        }
+            .modal-content ol li h2 {
+                font-size: 1.1rem;
+                display: inline-block;
+                color: #010638;
+                margin: auto 0 auto 1rem;
+                user-select: none;
+                vertical-align: text-bottom;
+            }
+
+/* Modal List Element Extra Style*/
+.list-element {
+    border: 0;
+    height: auto;
+}
+
+/* Modal Exit Button Style */
+.modal-close {
+    color: #010638;
+    float: right;
+    font-size: 2rem;
+    font-weight: bold;
+    user-select: none;
+}
+    .modal-close:hover {
+        color: #E67A14;
+        cursor: pointer;
+    }
+
+/* Dropdown Content Style */
+.dropdown-content {
+    display: none;
+    position: relative;
+    background-color: rgba(242, 242, 242, 0.8);
+    backdrop-filter: blur(0.2rem);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 0.2rem 0.5rem;
+    z-index: 1;
+    margin: 0.3rem 1.2rem;
+}
+    .dropdown-content p {
+        margin: 0;
+        font-size: 0.75rem;
+    }
+    .dropdown-content a {
+        text-decoration: none;
+        color: #005AEB;
+    }
+        .dropdown-content a:hover {
+            color: #E67A14;
+        }
+        .dropdown-content a:active {
+            color: #010638;
+        }
+
+/* Select algorithm button style */
+.select-algorithm {
+    border: 0;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    text-align: center;
+    background-color: #005aeb;
+    color: #f2f2f2;
+    font-size: 0.9rem;
+    position: relative;
+    bottom: 0;
+    margin: 1.5rem auto 1rem auto;
+    cursor: not-allowed;
+}
+    .select-algorithm:focus {
+        outline-width: 0;
+    }
+
+/* Algorithm Information Button Style */
+.information {
+    display: inline-block;
+    float: right;
+    width: 1.2rem;
+    height: 1.2rem;
+    margin: 0.22rem 1rem auto 0;
+    color: #010638;
+    cursor: pointer;
+}
+    .information:hover {
+        color: #005AEB;
+    }
+    .information:active {
+        color: #e67a14;
+    }
+
+.error-container {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 25%;
+    margin: 0.5rem auto;
+    background-color: rgba(230, 122, 20, 0.7);
+    backdrop-filter: blur(5px);
+    border-radius: 0.5rem;
+    width: 50%;
+    height: auto;
+    z-index: 1;
+    text-align: left;
+}
+    .error-container p {
+        display: inline-block;
+        margin: 1rem 3rem 1rem 0.8rem;
+        color: #010638;
+        font-weight: bold;
+    }
+
+.error-understood-button {
+    display: inline-block;
+    border: 0;
+    border-radius: 0.5rem;
+    padding: 0;
+    text-align: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: transparent;
+    color: #f2f2f2;
+    font-size: 0.9rem;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    margin: 0;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+    .error-understood-button:hover {
+        color: #010638;
+    }
+    .error-understood-button:active {
+        color: #40c928;
+    }
+
+.left-menu-toggler-trigger {
+    width: 1.5em;
+    height: 1.5rem;
+    position: absolute;
+    left: 0.5rem;
+    top: 0.5rem;
+    background-color: transparent;
+    color: #e67a14;
+    cursor: pointer;
+}
+    .left-menu-toggler-trigger:hover {
+        color: #005aeb;
+    }
+    .left-menu-toggler-trigger:active {
+        color: #010638;
+    }
+
+/*============ Page Responsiveness ============*/
+@media only screen and (max-width: 600px) {
+    .root {
+        --left-menu-distance-left: -6rem;
+    }
+
+    .logo-container {
+        margin-top: -1.1rem;
+        transform: scale(0.2);
+    }
+
+    .modal-content {
+        margin: auto;
+        width: 100%;
+        transform: scale(0.3) translate(-12.5%, -112%);
+    }
+    #menu a {
+        right: -8.4rem;
+        transform: scale(0.2);
+    }
+        #menu a:hover {
+            right: -6rem;
+        }
+    .home {
+        top: 15%;
+    }
+    .algorithms {
+        top: 25%;
+    }
+    .patterns {
+        top: 35%;
+    }
+    .credits {
+        top: 45%;
+    }
+
+    #dashboard {
+        top: 14%;
+    }
+        #dashboard a {
+            left: -8.4rem;
+            transform: scale(0.2);
+        }
+            #dashboard a:hover {
+                left: -6rem;
+            }
+    
+    #toolbox {
+        top: 4.5%;
+    }
+        #toolbox a {
+            left: -1.1rem;
+            transform: scale(0.2);
+        }
+
+    .left-menu-toggler {
+        left: -0.4rem;
+        top: -0.5rem;
+        transform: scale(0.2);
+    }
+
+    .left-menu-toggler-trigger {
+        left: -0.4rem;
+        top: -0.4rem;
+        transform: scale(0.2);
+    }
+    
+    
+}
+
+@media only screen and (min-width: 600px) {
+    .root {
+        --left-menu-distance-left: -6rem;
+    }
+
+    .logo-container {
+        margin-top: -0.7rem;
+        transform: scale(0.4);
+    }
+
+    #menu a {
+        right: -9.3rem;
+        transform: scale(0.4);
+    }
+
+    #menu a:hover {
+        right: -4.5rem;
+    }
+
+    .modal-content {
+        margin: -10% auto;
+        width: 90%;
+        transform: scale(0.5);
+    }
+    .home {
+        top: 15%;
+    }
+
+    .algorithms {
+        top: 25%;
+    }
+
+    .patterns {
+        top: 35%;
+    }
+
+    .credits {
+        top: 45%;
+    }
+
+    #dashboard {
+        top: 14%;
+    }
+
+        #dashboard a {
+            left: -9.3rem;
+            transform: scale(0.4);
+        }
+
+            #dashboard a:hover {
+                left: -4.5rem;
+            }
+
+    #toolbox {
+        top: 4.5%;
+    }
+
+    #toolbox a {
+        left: -0.8rem;
+        transform: scale(0.4);
+    }
+
+    .left-menu-toggler {
+        left: -0.2rem;
+        top: 0.2rem;
+        transform: scale(0.4);
+    }
+
+    .left-menu-toggler-trigger {
+        left: -0.2rem;
+        top: -0.2rem;
+        transform: scale(0.4);
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .root {
+        --left-menu-distance-left: -6rem;
+    }
+
+    .logo-container {
+        margin-top: -0.2rem;
+        transform: scale(0.7);
+    }
+    .modal-content {
+        margin: auto;
+        width: 50%;
+        transform: scale(0.8);
+    }
+    #menu a {
+        right: -10.7rem;
+        transform: scale(0.7);
+    }
+
+    #menu a:hover {
+        right: -3rem;
+    }
+
+    .home {
+        top: 20%;
+    }
+
+    .algorithms {
+        top: 30%;
+    }
+
+    .patterns {
+        top: 40%;
+    }
+
+    .credits {
+        top: 50%;
+    }
+
+    #dashboard {
+        top: 20%;
+    }
+
+        #dashboard a {
+            left: -10.7rem;
+            transform: scale(0.7);
+        }
+
+    #dashboard a:hover {
+        left: -3rem;
+    }
+
+    #toolbox {
+        top: 10%;
+    }
+
+    #toolbox a {
+        left: -0.4rem;
+        transform: scale(0.7);
+    }
+
+    .left-menu-toggler {
+        left: 0.1rem;
+        top: 1.2rem;
+        transform: scale(0.7);
+    }
+
+    .left-menu-toggler-trigger {
+        left: 0.1rem;
+        top: 0.1rem;
+        transform: scale(0.7);
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .root {
+        --left-menu-distance-left: -6rem;
+    }
+
+    .logo-container {
+        margin-top: 0.2rem;
+        transform: scale(1);
+    }
+
+    .modal-content {
+        margin: 5% auto;
+        width: 50%;
+        transform: scale(1.1);
+    }
+    #menu a {
+        right: -12.1rem;
+        transform: scale(1);
+    }
+
+    #menu a:hover {
+        right: 0;
+    }
+
+    .home {
+        top: 20%;
+    }
+
+    .algorithms {
+        top: 30%;
+    }
+
+    .patterns {
+        top: 40%;
+    }
+
+    .credits {
+        top: 50%;
+    }
+
+    #dashboard {
+        top: 20%;
+    }
+
+        #dashboard a {
+            left: -12.1rem;
+            transform: scale(1);
+        }
+
+    #dashboard a:hover {
+        left: 0;
+    }
+
+    #toolbox {
+        top: 10%;
+    }
+
+    #toolbox a {
+        left: 0;
+        transform: scale(1);
+    }
+
+    .left-menu-toggler {
+        left: 0.35rem;
+        top: 2.3rem;
+        transform: scale(1);
+    }
+
+    .left-menu-toggler-trigger {
+        left: 0.4rem;
+        top: 0.4rem;
+        transform: scale(1);
+    }
+}
+
+
+
+@media only screen and (min-width: 3000px) {
+    .root {
+        --left-menu-distance-left: -6rem;
+    }
+
+    .logo-container {
+        margin-top: 2rem;
+        transform: scale(2);
+    }
+    
+    .modal-content {
+        margin: 10% auto;
+        width: 30%;
+        transform: scale(2);
+    }
+
+    #menu a {
+        right: -16.5rem;
+        transform: scale(2);
+    }
+        #menu a:hover {
+            right: 7.5rem;
+        }
+
+    #dashboard a {
+        left: -16.5rem;
+        transform: scale(2);
+    }
+        #dashboard a:hover {
+            left: 7.5rem;
+        }
+
+    #toolbox a {
+        left: 2rem;
+        transform: scale(2);
+    }
+
+    .left-menu-toggler {
+        left: 2.25rem;
+        top: 7rem;
+        transform: scale(2);
+    }
+
+    .left-menu-toggler-trigger {
+        left: 2.25rem;
+        top: 2rem;
+        transform: scale(2);
+    }
+}
+
+@media (max-aspect-ratio: 3/2) {
+    .bottom-left-hexagon-pattern {
+        height: 23.5%;
+    }
+}
+
+@media (min-aspect-ratio: 4/3) {
+    .bottom-left-hexagon-pattern {
+        height: 20%;
+    }
+}
+
+@media (min-aspect-ratio: 5/4) {
+    .bottom-left-hexagon-pattern {
+        height: 20.5%;
+    }
+}
+
+@media (min-aspect-ratio: 1/1) {
+    .bottom-left-hexagon-pattern {
+        height: 17%;
+    }
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .bottom-left-hexagon-pattern {
+        height: 37%;
+    }
+}
+
+@media only screen and (orientation: portrait) {
+    .bottom-left-hexagon-pattern {
+        height: 12%;
+    }
+}
