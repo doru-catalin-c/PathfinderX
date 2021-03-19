@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  ![PathfinderX Logo](https://user-images.githubusercontent.com/80906954/111779058-efe2ac00-88b5-11eb-8e72-42372a19a8b5.png)
+  <img src="https://user-images.githubusercontent.com/80906954/111779058-efe2ac00-88b5-11eb-8e72-42372a19a8b5.png" alt="logo"></img>
 
   <p align="center">
     Just another pathfinding algorithms visualizer.
