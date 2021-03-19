@@ -1,9 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://pathfinderx.doru-catalin.com/">
-    <img src="https://lh3.googleusercontent.com/8_oxM4-LzocUiX72x295OIEcu2APn5-4XnVlsYk83UvP-iXmeqfza4q9RNq_ykZ-Vfdxj1SLsUk1MkGXJA78=w1037-h842" alt="Logo" width="340" height="80">
-  </a>
+  ![PathfinderX Logo](https://user-images.githubusercontent.com/80906954/111779058-efe2ac00-88b5-11eb-8e72-42372a19a8b5.png)
 
   <p align="center">
     Just another pathfinding algorithms visualizer.
