@@ -44,7 +44,6 @@
     left: 50%;
     transform: translate(-55%, -40%);
 }
-
     .return-home-button:hover {
         background-color: #005AEB;
     }
@@ -52,7 +51,7 @@
         background-color: #104580;
     }
 
-    .return-home-button p {
+.return-home-button p {
         color: #F2f2f2;
         display: inline-block;
         position: relative;
