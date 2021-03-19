@@ -1,0 +1,116 @@
+﻿.error-icon {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    width: 6rem;
+    height: 6rem;
+}
+
+.error-message-container {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    text-align: center;
+}
+
+.error-title {
+    position: relative;
+    margin-top: 5rem;
+    margin-bottom: 0;
+    font-size: 3rem;
+    color: #EF5261;
+}
+
+.error-message {
+    position: relative;
+    font-size: 1.5rem;
+    color: #EF5261;
+}
+
+.return-home-button {
+    width: 10rem;
+    height: 2.1rem;
+    border-radius: 0.5rem;
+    padding-top: 0.1rem;
+    text-align: center;
+    text-decoration: none;
+    background-color: #1689FC;
+    font-size: 1rem;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-55%, -40%);
+}
+
+    .return-home-button:hover {
+        background-color: #005AEB;
+    }
+    .return-home-button:active {
+        background-color: #104580;
+    }
+
+    .return-home-button p {
+        color: #F2f2f2;
+        display: inline-block;
+        position: relative;
+        top: 0;
+        left: 30%;
+        transform: translate(-50%, -50%);
+    }
+
+.error-home-icon {
+    background: url("../Vectors/Home.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1.5rem;
+    height: 1.5rem;
+    position: relative;
+    display: inline-block;
+    top: 20%;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 600px) {
+    .error-icon {
+        top: 20%;
+    }
+    .error-title {
+        font-size: 2.5rem;
+    }
+    .error-message {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .error-icon {
+        top: 20%;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .error-icon {
+        top: 25%;
+        width: 10rem;
+        height: 10rem;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .error-icon {
+        top: 30%;
+        width: 10rem;
+        height: 10rem;
+    }
+    .error-title {
+        font-size: 3rem;
+    }
+
+    .error-message {
+        font-size: 2rem;
+    }
+}

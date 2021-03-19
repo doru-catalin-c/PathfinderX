@@ -14,7 +14,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PathfinderX</RootNamespace>
     <AssemblyName>PathfinderX</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -54,16 +55,14 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Xml" />
@@ -105,6 +104,7 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
@@ -118,6 +118,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -128,6 +129,7 @@
     <Content Include="Content\Images\Bottom-Left Hexagon Pattern.png" />
     <Content Include="Content\Images\favicon.ico" />
     <Content Include="Content\Styles\Animations.css" />
+    <Content Include="Content\Styles\Errors.css" />
     <Content Include="Content\Vectors\Algorithms.svg" />
     <Content Include="Content\Vectors\Clear Board.svg" />
     <Content Include="Content\Vectors\Credits.svg" />
@@ -181,6 +183,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\FTPProfile.pubxml" />
+    <Content Include="Views\Error\Unexpected.cshtml" />
+    <Content Include="Views\Error\NotFound.cshtml" />
+    <Content Include="Views\Error\Unauthorized.cshtml" />
+    <Content Include="Views\Error\ServerError.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -215,9 +222,9 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
-    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
   </Target>
-  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

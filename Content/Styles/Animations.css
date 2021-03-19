@@ -128,6 +128,7 @@
     }
 }
 
+/* Animates the modal in*/
 @keyframes modal-in {
     from {
         background-color: rgba(0, 0, 0, 0);

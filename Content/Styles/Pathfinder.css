@@ -2,18 +2,11 @@
     --grid-columns: 1;
     --grid-rows: 1;
     --cell-size: 2;
+
     --left-menu-distance-left: -6rem;
+
     --grid-wall-left: -1px;
     --grid-wall-top: -1px;
-    --grid-weight-top: 0.1rem;
-    --grid-weight-left: 0.23rem;
-    --grid-weight-width: 85%;
-    --grid-weight-height: 82%;
-
-    --grid-startNode-top: 0.05rem;
-    --grid-startNode-left: 0.04rem;
-    --grid-startNode-width: 85%;
-    --grid-startNode-height: 82%;
 }
 
 /* Grid Style */

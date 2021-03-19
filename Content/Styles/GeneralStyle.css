@@ -1098,8 +1098,6 @@ body {
     }
 }
 
-
-
 @media only screen and (min-width: 3000px) {
     .root {
         --left-menu-distance-left: -6rem;
