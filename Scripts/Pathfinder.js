@@ -327,9 +327,9 @@ function SetNodeType(toolNode, toolClass, cellId, cellNode) {
         case "weight":
             toolNode.style.position = "relative";
             node.isWeight = true;
-            toolNode.style.width = "75%";
-            toolNode.style.height = "90%";
-            toolNode.style.left = "50%";
+            toolNode.style.width = "71%";
+            toolNode.style.height = "85%";
+            toolNode.style.left = "var(--grid-weight-left)";
             toolNode.style.top = "50%";
             toolNode.style.transform = "translate(-50%, -50%)";
             toolNode.style.animation = "scale 0.2s ease-in forwards";
@@ -345,11 +345,11 @@ function SetNodeType(toolNode, toolClass, cellId, cellNode) {
                     node.priority = 0;
                 }
                 startNode = node;
-                toolNode.style.width = "92%";
+                toolNode.style.width = "90%";
                 toolNode.style.height = "90%";
-                toolNode.style.left = "50%";
-                toolNode.style.top = "50%";
-                toolNode.style.transform = "translate(-52%, -52%)";
+                toolNode.style.left = "var(--grid-start-node-left)";
+                toolNode.style.top = "var(--grid-start-node-top)";
+                toolNode.style.transform = "translate(-50%, -50%)";
                 toolNode.style.animation = "scale 0.2s ease-in forwards";
                 cellNode.appendChild(toolNode);
             }
@@ -361,8 +361,8 @@ function SetNodeType(toolNode, toolClass, cellId, cellNode) {
                 node.isEndNode = true;
                 toolNode.style.width = "90%";
                 toolNode.style.height = "90%";
-                toolNode.style.left = "50%";
-                toolNode.style.top = "50%";
+                toolNode.style.left = "var(--grid-start-node-left)";
+                toolNode.style.top = "var(--grid-start-node-top)";
                 toolNode.style.transform = "translate(-50%, -50%)";
                 toolNode.style.animation = "scale 0.2s ease-in forwards";
 

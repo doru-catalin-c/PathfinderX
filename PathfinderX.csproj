@@ -126,7 +126,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Images\Bottom-Left Hexagon Pattern.png" />
     <Content Include="Content\Images\favicon.ico" />
     <Content Include="Content\Styles\Animations.css" />
     <Content Include="Content\Styles\Errors.css" />
@@ -143,7 +142,7 @@
     <Content Include="Content\Vectors\Run.svg" />
     <Content Include="Content\Vectors\Speed.svg" />
     <Content Include="Content\Vectors\Start Node.svg" />
-    <Content Include="Content\Images\Top-Right Hexagon Pattern.png" />
+    <Content Include="Content\Images\Hexagon Pattern.png" />
     <Content Include="Content\Styles\Pathfinder.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -183,11 +182,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="Properties\PublishProfiles\FTPProfile.pubxml" />
     <Content Include="Views\Error\Unexpected.cshtml" />
     <Content Include="Views\Error\NotFound.cshtml" />
     <Content Include="Views\Error\Unauthorized.cshtml" />
     <Content Include="Views\Error\ServerError.cshtml" />
+    <None Include="Properties\PublishProfiles\HostGator FTP.pubxml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

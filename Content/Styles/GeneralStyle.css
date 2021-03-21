@@ -1,15 +1,30 @@
 ﻿@import url(Animations.css);
 
-/* Set Overall Body Style */
-body {
+/* Set Document Size */
+html, body {
+    width: 100%;
+    height: 100%;
     padding: 0;
     margin: 0;
+}
+
+/* Set Overall Body Style */
+body {
     background-color: #F2F2F2;
     font-family: 'Jura', sans-serif;
     font-size: 1rem;
     font-weight: 400;
     color: #14111A;
     line-height: 1.5;
+    overflow: hidden;
+}
+
+/* Main Container Style */
+.main-container {
+    z-index: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
 }
 
@@ -64,22 +79,31 @@ body {
 }
 
 /* =====================================  Menu  ===================================== */
-#menu a {
-    position: absolute;
-    right: -12.1rem;
-    width: 15rem;
-    height: 2.85rem;
-    font-family: 'Jura', sans-serif;
-    color: #E67A14;
-    text-decoration: none;
-    text-align: center;
-    background-color: transparent;
-    border-radius: 0.6rem 0 0 0.6rem;
-    transition: 0.3s;
-    z-index: 1;
+#menu {
+    position: relative;
+    top: 15%;
+    float: right;
+    width: 3rem;
+    height: 40%;
 }
-    #menu a:hover {
+    #menu a {
+        display: block;
+        position: relative;
         right: 0;
+        width: 15rem;
+        height: 2.85rem;
+        font-family: 'Jura', sans-serif;
+        color: #E67A14;
+        text-decoration: none;
+        text-align: center;
+        background-color: transparent;
+        transition: 0.3s;
+        z-index: 0;
+        padding-top: 1px;
+        padding-bottom: 0.4rem;
+    }
+    #menu a:hover {
+        right: 12rem;
     }
         #menu a:hover .border-outer-top-line {
             animation: draw 0.8s linear;
@@ -120,8 +144,6 @@ body {
         font-family: 'Play', sans-serif;
         font-size: 1rem;
         margin-left: 3rem;
-        margin-block-start: 0.8rem;
-        margin-block-end: 0;
     }
 
 /* Menu Vectors Style */
@@ -136,7 +158,7 @@ body {
 
 /* Home Menu Item Style*/
 .home {
-    top: 20%;
+    top: 0;
 }
 .home-icon {
     background-image: url("../Vectors/Home.svg");
@@ -150,7 +172,7 @@ body {
 
 /* Algorighms Menu Item Style */
 .algorithms {
-    top: 30%;
+    top: 10%;
 }
 .algorithms-icon {
     background-image: url("../Vectors/Algorithms.svg");
@@ -164,7 +186,7 @@ body {
 
 /* Patterns Menu Item Style */
 .patterns {
-    top: 40%;
+    top: 20%;
 }
 .patterns-icon {
     background-image: url("../Vectors/Patterns.svg");
@@ -178,7 +200,7 @@ body {
 
 /* Credits Menu Item Style */
 .credits {
-    top: 50%;
+    top: 30%;
 }
 .credits-icon {
     background-image: url("../Vectors/Credits.svg");
@@ -250,15 +272,17 @@ body {
 
 /* ===================================== Toolbox ===================================== */
 #toolbox {
-    position: absolute;
-    left: var(--left-menu-distance-left);
-    top: 10%;
+    float: left;
+    position: relative;
+    top: 14.25%;
     width: 3rem;
     height: 40%;
-    z-index: 0;
+    left: var(--left-menu-distance-left);
+    transform: translateX(-100%);
 }
     #toolbox a {
-        position: absolute;
+        display: block;
+        position: relative;
         left: 0;
         width: 2.85rem;
         height: 2.85rem;
@@ -267,8 +291,10 @@ body {
         text-decoration: none;
         text-align: center;
         background-color: transparent;
-        border-radius: 0.6rem 0 0 0.6rem;
-        z-index: 1;
+        transition: 0.3s;
+        z-index: 0;
+        padding-top: 1px;
+        padding-bottom: 0.2rem;
     }
         #toolbox a:hover .tooltip .tooltip-text {
             visibility: visible;
@@ -290,13 +316,13 @@ body {
 
 /* Wall Style */
 .wall {
-    top: 25%;
+    top: 5%;
 }
 .wall-icon {
     background-color: #010638;
-    position: absolute;
-    left: 0.42rem;
-    top: .42rem;
+    position: relative;
+    float: left;
+    left: 0.5rem;
     width: 2rem;
     height: 2rem;
     padding: 0;
@@ -316,17 +342,17 @@ body {
 
 /* Start Node Style */
 .start-node {
-    top: 50%;
+    top: 15%;
 }
 .start-node-icon {
     background: url("../Vectors/Start Node.svg");
     background-repeat: no-repeat;
     background-size: contain;
-    position: absolute;
-    left: 0.2rem;
-    top: .26rem;
-    width: 2.4rem;
-    height: 2.4rem;
+    position: relative;
+    float: left;
+    left: 0.35rem;
+    width: 2.3rem;
+    height: 2.3rem;
     padding: 0;
 }
 .start-node-legend-icon {
@@ -344,17 +370,17 @@ body {
 
 /* End Node Style */
 .end-node {
-    top: 75%;
+    top: 25%;
 }
 .end-node-icon {
     background: url("../Vectors/End Node.svg");
     background-repeat: no-repeat;
     background-size: contain;
-    position: absolute;
-    left: 0.2rem;
-    top: .26rem;
-    width: 2.4rem;
-    height: 2.4rem;
+    position: relative;
+    float: left;
+    left: 0.35rem;
+    width: 2.3rem;
+    height: 2.3rem;
     padding: 0;
 }
 .end-node-legend-icon {
@@ -374,17 +400,17 @@ body {
 /* Weight Style */
 .weight {
     display: block;
-    top:100%;
+    top: 35%;
 }
 .weight-icon {
     background: url("../Vectors/Lock.svg");
     background-repeat: no-repeat;
     background-size: contain;
-    position: absolute;
-    left: 0.46rem;
-    top: .24rem;
-    width: 1.85rem;
-    height: 2.4rem;
+    position: relative;
+    float: left;
+    left: 0.55rem;
+    width: 2.3rem;
+    height: 2.3rem;
     padding: 0;
 }
 .weight-legend-icon {
@@ -435,17 +461,17 @@ body {
 
 /* =====================================  Dashboard  ===================================== */
 #dashboard {
-    position: absolute;
-    left: 0;
-    top: 20%;
+    float: left;
+    position: relative;
+    top: 15%;
     width: 3rem;
     height: 40%;
-    z-index: 1;
-    background-color: transparent;
+    z-index: 0;
 }
     #dashboard a {
-        position: absolute;
-        left: -12.1rem;
+        display: block;
+        position: relative;
+        left: -12rem;
         width: 15rem;
         height: 2.85rem;
         font-family: 'Jura', sans-serif;
@@ -453,8 +479,10 @@ body {
         text-decoration: none;
         text-align: center;
         background-color: transparent;
-        border-radius: 0.6rem 0 0 0.6rem;
         transition: 0.3s;
+        z-index: 0;
+        padding-top: 1px;
+        padding-bottom: 0.2rem;
     }
         #dashboard a p {
             z-index: 1;
@@ -517,7 +545,7 @@ body {
 
 /* Clear Board Icon Style*/
 .clear-board {
-    top: 25%;
+    top: 10%;
 }
 
 .clear-board-icon {
@@ -532,7 +560,7 @@ body {
 
 /* Speed Icon Style */
 .speed {
-    top: 50%;
+    top: 20%;
 }
 
 .speed-icon {
@@ -547,7 +575,7 @@ body {
  
 /* Legend Icon Style */
 .legend {
-    top: 75%;
+    top: 30%;
 }
 
 .legend-icon {
@@ -563,17 +591,18 @@ body {
 
 /* Hexagon Patterns Background Detail Style */
 .bottom-left-hexagon-pattern {
-    z-index: -2;
-    width: 37%;
-    height: 35%;
     position: absolute;
     bottom: 0;
     left: 0;
-    background-image: url("../Images/Bottom-Left Hexagon Pattern.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-size: contain;
+    z-index: -2;
+    width: 27%;
+    height: 50%;
+    transform: scaleX(-1) scaleY(-1);
 }
+    .bottom-left-hexagon-pattern img {
+        width: 100%;
+        height: auto;
+    }
 
 .top-right-hexagon-pattern {
     z-index: -2;
@@ -582,10 +611,11 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    background-image: url("../Images/Top-Right Hexagon Pattern.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-size: contain;
+}
+
+.top-right-hexagon-pattern img {
+    width: 100%;
+    height: auto;
 }
 
 /* Modal Style */
@@ -741,6 +771,8 @@ body {
         color: #e67a14;
     }
 
+
+/* Error Container Style */
 .error-container {
     display: none;
     position: absolute;
@@ -804,307 +836,97 @@ body {
         color: #010638;
     }
 
+.small-screen-notice-container {
+    display: none;
+    z-index: 1;
+    position: absolute;
+    background-color: #F2F2F2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
 /*============ Page Responsiveness ============*/
 @media only screen and (max-width: 600px) {
-    .root {
-        --left-menu-distance-left: -6rem;
+    #menu a, #dashboard, #toolbox {
+        display: none;
     }
 
-    .logo-container {
-        margin-top: -1.1rem;
-        transform: scale(0.2);
+    .small-screen-notice-container {
+        display: block;
     }
-
-    .modal-content {
-        margin: auto;
-        width: 100%;
-        transform: scale(0.3) translate(-12.5%, -112%);
-    }
-    #menu a {
-        right: -8.4rem;
-        transform: scale(0.2);
-    }
-        #menu a:hover {
-            right: -6rem;
-        }
-    .home {
-        top: 15%;
-    }
-    .algorithms {
-        top: 25%;
-    }
-    .patterns {
-        top: 35%;
-    }
-    .credits {
-        top: 45%;
-    }
-
-    #dashboard {
-        top: 14%;
-    }
-        #dashboard a {
-            left: -8.4rem;
-            transform: scale(0.2);
-        }
-            #dashboard a:hover {
-                left: -6rem;
-            }
-    
-    #toolbox {
-        top: 4.5%;
-    }
-        #toolbox a {
-            left: -1.1rem;
-            transform: scale(0.2);
-        }
-
-    .left-menu-toggler {
-        left: -0.4rem;
-        top: -0.5rem;
-        transform: scale(0.2);
-    }
-
-    .left-menu-toggler-trigger {
-        left: -0.4rem;
-        top: -0.4rem;
-        transform: scale(0.2);
-    }
-    
-    
 }
 
 @media only screen and (min-width: 600px) {
-    .root {
-        --left-menu-distance-left: -6rem;
+    #menu a, #dashboard, #toolbox {
+        display: none;
     }
-
-    .logo-container {
-        margin-top: -0.7rem;
-        transform: scale(0.4);
-    }
-
-    #menu a {
-        right: -9.3rem;
-        transform: scale(0.4);
-    }
-
-    #menu a:hover {
-        right: -4.5rem;
-    }
-
-    .modal-content {
-        margin: -10% auto;
-        width: 90%;
-        transform: scale(0.5);
-    }
-    .home {
-        top: 15%;
-    }
-
-    .algorithms {
-        top: 25%;
-    }
-
-    .patterns {
-        top: 35%;
-    }
-
-    .credits {
-        top: 45%;
-    }
-
-    #dashboard {
-        top: 14%;
-    }
-
-        #dashboard a {
-            left: -9.3rem;
-            transform: scale(0.4);
-        }
-
-            #dashboard a:hover {
-                left: -4.5rem;
-            }
-
-    #toolbox {
-        top: 4.5%;
-    }
-
-    #toolbox a {
-        left: -0.8rem;
-        transform: scale(0.4);
-    }
-
-    .left-menu-toggler {
-        left: -0.2rem;
-        top: 0.2rem;
-        transform: scale(0.4);
-    }
-
-    .left-menu-toggler-trigger {
-        left: -0.2rem;
-        top: -0.2rem;
-        transform: scale(0.4);
+    .small-screen-notice-container {
+        display: block;
     }
 }
 
 @media only screen and (min-width: 900px) {
-    .root {
-        --left-menu-distance-left: -6rem;
+    #menu a, #dashboard, #toolbox {
+        display: block;
     }
-
-    .logo-container {
-        margin-top: -0.2rem;
-        transform: scale(0.7);
-    }
-    .modal-content {
-        margin: auto;
-        width: 50%;
-        transform: scale(0.8);
-    }
-    #menu a {
-        right: -10.7rem;
-        transform: scale(0.7);
-    }
-
-    #menu a:hover {
-        right: -3rem;
-    }
-
-    .home {
-        top: 20%;
-    }
-
-    .algorithms {
-        top: 30%;
-    }
-
-    .patterns {
-        top: 40%;
-    }
-
-    .credits {
-        top: 50%;
-    }
-
-    #dashboard {
-        top: 20%;
-    }
-
-        #dashboard a {
-            left: -10.7rem;
-            transform: scale(0.7);
-        }
-
-    #dashboard a:hover {
-        left: -3rem;
-    }
-
-    #toolbox {
-        top: 10%;
-    }
-
-    #toolbox a {
-        left: -0.4rem;
-        transform: scale(0.7);
-    }
-
-    .left-menu-toggler {
-        left: 0.1rem;
-        top: 1.2rem;
-        transform: scale(0.7);
-    }
-
-    .left-menu-toggler-trigger {
-        left: 0.1rem;
-        top: 0.1rem;
-        transform: scale(0.7);
+    .small-screen-notice-container {
+        display: none;
     }
 }
 
-@media only screen and (min-width: 1200px) {
-    .root {
-        --left-menu-distance-left: -6rem;
-    }
-
+@media only screen and (min-width: 1900px) {
     .logo-container {
-        margin-top: 0.2rem;
-        transform: scale(1);
+        transform: scale(1.3);
+        margin-top: 1rem;
     }
 
     .modal-content {
-        margin: 5% auto;
-        width: 50%;
-        transform: scale(1.1);
-    }
-    #menu a {
-        right: -12.1rem;
-        transform: scale(1);
+        margin: 8% auto;
+        transform: scale(1.3);
+
     }
 
-    #menu a:hover {
-        right: 0;
-    }
-
-    .home {
+    #menu {
+        right: 0.5rem;
         top: 20%;
-    }
-
-    .algorithms {
-        top: 30%;
-    }
-
-    .patterns {
-        top: 40%;
-    }
-
-    .credits {
-        top: 50%;
+        transform: scale(1.3);
     }
 
     #dashboard {
+        margin-left: 0.5rem;
         top: 20%;
+        transform: scale(1.3);
     }
-
         #dashboard a {
-            left: -12.1rem;
-            transform: scale(1);
+            padding-top: 0.2rem;
+            padding-bottom: 0.3rem;
         }
 
-    #dashboard a:hover {
-        left: 0;
-    }
-
     #toolbox {
-        top: 10%;
+        top: 18.75%;
+        transform: scale(1.3) translateX(-80%);
     }
-
-    #toolbox a {
-        left: 0;
-        transform: scale(1);
-    }
+        #toolbox a {
+            padding-top: 0.2rem;
+            padding-bottom: 0.3rem;
+        }
 
     .left-menu-toggler {
-        left: 0.35rem;
-        top: 2.3rem;
-        transform: scale(1);
+        left: 1rem;
+        top: 3.8rem;
+        transform: scale(1.3);
     }
-
     .left-menu-toggler-trigger {
-        left: 0.4rem;
-        top: 0.4rem;
-        transform: scale(1);
+        left: 1rem;
+        top: 1rem;
+        transform: scale(1.3);
     }
 }
 
 @media only screen and (min-width: 3000px) {
-    .root {
-        --left-menu-distance-left: -6rem;
-    }
-
     .logo-container {
-        margin-top: 2rem;
+        margin-top: 2.4rem;
         transform: scale(2);
     }
     
@@ -1113,73 +935,53 @@ body {
         width: 30%;
         transform: scale(2);
     }
-
+    
     #menu a {
-        right: -16.5rem;
-        transform: scale(2);
+        right: -2.8rem;
+        transform: scale(1.6);
+        padding-top: 1.6rem;
+        padding-bottom: 2rem;
     }
         #menu a:hover {
-            right: 7.5rem;
+            right: 16.5rem;
         }
-
+        
     #dashboard a {
-        left: -16.5rem;
-        transform: scale(2);
+        left: -15rem;
+        transform: scale(1.6);
+        padding-top: 1.8rem;
+        padding-bottom: 2rem;
     }
         #dashboard a:hover {
-            left: 7.5rem;
+            left: 4.5rem;
         }
 
-    #toolbox a {
-        left: 2rem;
-        transform: scale(2);
+    #toolbox {
+        top: 32.5%;
+        transform: scale(2) translateX(-35%);
     }
-
+    .wall {
+        top: 4.5%;
+    }
+    .start-node {
+        top: 13%;
+    }
+    .end-node {
+        top: 22%;
+    }
+    .weight {
+        top: 31%;
+    }
+    
     .left-menu-toggler {
-        left: 2.25rem;
+        left: 2rem;
         top: 7rem;
         transform: scale(2);
     }
-
     .left-menu-toggler-trigger {
-        left: 2.25rem;
+        left: 2rem;
         top: 2rem;
         transform: scale(2);
     }
 }
 
-@media (max-aspect-ratio: 3/2) {
-    .bottom-left-hexagon-pattern {
-        height: 23.5%;
-    }
-}
-
-@media (min-aspect-ratio: 4/3) {
-    .bottom-left-hexagon-pattern {
-        height: 20%;
-    }
-}
-
-@media (min-aspect-ratio: 5/4) {
-    .bottom-left-hexagon-pattern {
-        height: 20.5%;
-    }
-}
-
-@media (min-aspect-ratio: 1/1) {
-    .bottom-left-hexagon-pattern {
-        height: 17%;
-    }
-}
-
-@media (min-aspect-ratio: 16/9) {
-    .bottom-left-hexagon-pattern {
-        height: 37%;
-    }
-}
-
-@media only screen and (orientation: portrait) {
-    .bottom-left-hexagon-pattern {
-        height: 12%;
-    }
-}

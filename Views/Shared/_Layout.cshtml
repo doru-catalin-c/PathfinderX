@@ -19,6 +19,42 @@
 </head>
 
 <body oncontextmenu="return false;">
-    @RenderBody()
+    <div class="main-container">
+        <div id="smallScreenNoticeContainer" class="small-screen-notice-container">
+            <svg class="error-icon" enable-background="new 0 0 497 497" height="100%" viewBox="0 0 497 497" width="100%" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                    <path d="m186.269 348.178 62.231-20 62.231 20-6.623 9.514 13.723 10.486 18.816 53.006-88.147 20-88.147-20 18.816-53.006 13.569-10.053z" fill="#978ecb" />
+                    <path d="m179.169 368.178h138.662l-7.1-20-62.231-20-62.231 20z" fill="#6e61b6" />
+                    <path d="m0 333.178c0 8.284 6.716 15 15 15h449c8.284 0 15-6.716 15-15v-289.636c0-8.284-6.716-15-15-15h-449c-8.284 0-15 6.716-15 15z" fill="#5b596d" />
+                    <path d="m482 28.542h-30c8.284 0 15 6.716 15 15v289.636c0 8.284-6.716 15-15 15h30c8.284 0 15-6.716 15-15v-289.636c0-8.285-6.716-15-15-15z" fill="#3e3e4d" />
+                    <path d="m380.77 468.458h-274.54c-5.523 0-10-4.477-10-10v-12.274c0-13.807 11.193-25 25-25h244.54c13.807 0 25 11.193 25 25v12.274c0 5.523-4.477 10-10 10z" fill="#edf5fa" />
+                    <path d="m375.77 421.184h-30c13.807 0 25 11.193 25 25v12.275c0 5.523-4.477 10-10 10h30c5.523 0 10-4.477 10-10v-12.275c0-13.807-11.193-25-25-25z" fill="#d0e7f2" />
+                    <path d="m380.538 291.806-123.378-215.893c-3.849-6.667-13.472-6.667-17.321 0l-3.747 4.491-122.63 212.402c-3.849 6.667.962 15 8.66 15h243.699l6.056-1c7.699 0 12.51-8.333 8.661-15z" fill="#e592b8" />
+                    <path d="m383.538 292.806-126.378-218.893c-3.849-6.667-13.472-6.667-17.321 0l-3.747 6.491c.788.696 1.497 1.52 2.068 2.509l126.378 218.893c1.121 1.942 1.489 4.022 1.283 6h9.056c7.699 0 12.51-8.333 8.661-15z" fill="#e175a5" />
+                    <ellipse cx="248.5" cy="264.998" fill="#edf5fa" rx="15.116" ry="15.116" transform="matrix(.229 -.973 .973 .229 -66.365 446.207)" />
+                    <g>
+                        <path d="m248.653 224.195c-8.264 0-14.963-6.699-14.963-14.963v-66.027c0-8.264 6.699-14.963 14.963-14.963s14.963 6.699 14.963 14.963v66.027c0 8.264-6.699 14.963-14.963 14.963z" fill="#edf5fa" />
+                    </g>
+                </g>
+            </svg>
+            <div class="error-message-container">
+                <h2 class="error-title">Uh-oh! You're gonna need a bigger screen...</h2>
+            </div>
+
+            <a href="/" class="return-home-button">
+                <span class="error-home-icon"></span>
+                <p>Return Home</p>
+            </a>
+        </div>
+
+        @RenderBody()
+        <span class="top-right-hexagon-pattern">
+            <img src="~/Content/Images/Hexagon Pattern.png" alt="TopRightPattern" ondragstart="return false;" />
+        </span>
+        <span class="bottom-left-hexagon-pattern">
+            <img src="~/Content/Images/Hexagon Pattern.png" alt="TopRightPattern" ondragstart="return false;" />
+        </span>
+        </div>
+    
 </body>
 </html>

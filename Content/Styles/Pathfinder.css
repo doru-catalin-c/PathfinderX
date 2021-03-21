@@ -2,11 +2,14 @@
     --grid-columns: 1;
     --grid-rows: 1;
     --cell-size: 2;
-
     --left-menu-distance-left: -6rem;
-
     --grid-wall-left: -1px;
     --grid-wall-top: -1px;
+    --grid-weight-left: 50%;
+    --grid-start-node-left: 47%;
+    --grid-start-node-top: 48%;
+    --grid-end-node-left: 47%;
+    --grid-end-node-top: 48%;
 }
 
 /* Grid Style */
@@ -37,59 +40,60 @@
 /* =====================================   Grid Responsiveness   ===================================== */
 
 @media only screen and (max-width: 600px) {
-    :root {
-        --grid-wall-left: -0.2px;
-        --grid-wall-top: -0.15px;
-    }
     .grid {
-        height: 70%;
-        --cell-size: 0.45;
-    }
-    .cell {
-        border: 0.02em solid #010638;
+        display: none;
     }
 }
 
 @media only screen and (min-width: 600px) {
-    :root {
-        --grid-wall-left: -1px;
-        --grid-wall-top: -0.6px;
-    }
-
     .grid {
-        height: 65%;
-        width: 70%;
-        --cell-size: 0.9;
-    }
-    .cell {
-        border: 0.05em solid #010638;
+        display: none;
     }
 }
 
 @media only screen and (min-width: 900px) {
+    :root {
+        --grid-weight-left: 49%;
+        --grid-start-node-left: 49.5%;
+        --grid-start-node-top: 49.5%;
+    }
     .grid {
-        height: 70%;
+        display: grid;
+        top: 54%;
+        height: 76%;
         width: 76%;
-        --cell-size: 1.4;
+        --cell-size: 1.8;
     }
     .cell {
-        border: 0.09em solid #010638;
+        border: 0.1em solid #010638;
     }
 }
 
 @media only screen and (min-width: 1200px) {
+    :root {
+        --grid-start-node-left: 49%;
+        --grid-start-node-top: 49%;
+        --grid-wall-top: -1.5px;
+        --grid-weight-left: 49.3%;
+    }
     .grid {
+        top: 50%;
         width: 75%;
         height: 72%;
         --cell-size: 2;
     }
 
     .cell {
-        border: 0.1em solid #010638;
+        border: 0.14em solid #010638;
     }
 }
 
-@media only screen and (min-width: 1800px) {
+@media only screen and (min-width: 1900px) {
+    :root {
+        --grid-weight-left: 50%;
+        --grid-start-node-left: 49%;
+        --grid-start-node-top: 49%;
+    }
     .grid {
         width: 75%;
         height: 70%;
@@ -101,6 +105,11 @@
 }
 
 @media only screen and (min-width: 3000px) {
+    :root {
+        --grid-weight-left: 52%;
+        --grid-start-node-left: 49%;
+        --grid-start-node-top: 50%;
+    }
     .grid {
         width: 75%;
         height: 70%;
