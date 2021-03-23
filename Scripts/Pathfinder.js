@@ -37,6 +37,8 @@ export function GenerateGrid() {
 
     DefineGridBoundaries(rows, columns);
     GenerateGridCells(grid, rows, columns);
+
+    AddGridBoundaryCellBorders();
 }
 
 /**
@@ -200,6 +202,8 @@ export function ClearCellElements() {
     for (let i = 0; i < cells.length; i++) {
         const cell = cells[i];
         cell.innerHTML = "";
+        cell.style.backgroundColor = "#f2f2f2";
+        cell.style.animation = "none";
         ResetNodeProperties(cell.id);
     }
 }
@@ -303,39 +307,49 @@ export function SelectCellObject(toolObject) {
  * @param {string} cellId
  */
 function SetNodeType(toolNode, toolClass, cellId, cellNode) {
+    // Break the spagetti code down - MUST REFACTOR!!!
     const node = nodeMap.get(cellId);
 
     if (node === undefined) {
         ShowErrorMessage("You must select an algorithm before placing anything on the grid.");
         return;
     }
-    const wallStyleLeft = getComputedStyle(document.body).getPropertyValue("--grid-wall-left");
-    const wallStyleTop = getComputedStyle(document.body).getPropertyValue("--grid-wall-top");
+
+    const startEndNodeStyleLeft = getComputedStyle(document.body).getPropertyValue("--start-end-node-left");
+    const startEndNodeStyleTop = getComputedStyle(document.body).getPropertyValue("--start-end-node-top");
+
     switch (toolClass) {
         case "wall":
-                node.isWall = true;
-                toolNode.style.position = "relative";
-                toolNode.style.left = wallStyleLeft;
-                toolNode.style.top = wallStyleTop;
-                toolNode.style.borderRadius = "0";
-                toolNode.style.width = "100%";
-                toolNode.style.height = "100%";
-                toolNode.style.animation = "scale-wall 0.2s ease-in";
+        {
+            const wallStyleLeft = getComputedStyle(document.body).getPropertyValue("--grid-wall-left");
+            const wallStyleTop = getComputedStyle(document.body).getPropertyValue("--grid-wall-top");
+            node.isWall = true;
+            toolNode.style.position = "relative";
+            toolNode.style.left = wallStyleLeft;
+            toolNode.style.top = wallStyleTop;
+            toolNode.style.borderRadius = "0";
+            toolNode.style.width = `105%`;
+            toolNode.style.height = `105%`;
+            toolNode.style.animation = "scale-wall 0.2s ease-in";
 
-                cellNode.appendChild(toolNode);
-                break;
+            cellNode.appendChild(toolNode);
+            break;
+        }
         case "weight":
+        {
+            const weightLeft = getComputedStyle(document.body).getPropertyValue("--grid-weight-left");
             toolNode.style.position = "relative";
             node.isWeight = true;
             toolNode.style.width = "71%";
             toolNode.style.height = "85%";
-            toolNode.style.left = "var(--grid-weight-left)";
+            toolNode.style.left = weightLeft;
             toolNode.style.top = "50%";
             toolNode.style.transform = "translate(-50%, -50%)";
             toolNode.style.animation = "scale 0.2s ease-in forwards";
 
             cellNode.appendChild(toolNode);
             break;
+        }
         case "start-node":
             if (startNode === undefined) {
                 toolNode.style.position = "relative";
@@ -347,8 +361,8 @@ function SetNodeType(toolNode, toolClass, cellId, cellNode) {
                 startNode = node;
                 toolNode.style.width = "90%";
                 toolNode.style.height = "90%";
-                toolNode.style.left = "var(--grid-start-node-left)";
-                toolNode.style.top = "var(--grid-start-node-top)";
+                toolNode.style.left = startEndNodeStyleLeft;
+                toolNode.style.top = startEndNodeStyleTop;
                 toolNode.style.transform = "translate(-50%, -50%)";
                 toolNode.style.animation = "scale 0.2s ease-in forwards";
                 cellNode.appendChild(toolNode);
@@ -361,8 +375,8 @@ function SetNodeType(toolNode, toolClass, cellId, cellNode) {
                 node.isEndNode = true;
                 toolNode.style.width = "90%";
                 toolNode.style.height = "90%";
-                toolNode.style.left = "var(--grid-start-node-left)";
-                toolNode.style.top = "var(--grid-start-node-top)";
+                toolNode.style.left = startEndNodeStyleLeft;
+                toolNode.style.top = startEndNodeStyleTop;
                 toolNode.style.transform = "translate(-50%, -50%)";
                 toolNode.style.animation = "scale 0.2s ease-in forwards";
 
@@ -370,27 +384,16 @@ function SetNodeType(toolNode, toolClass, cellId, cellNode) {
             }
             break;
         case "visited-node":
-            toolNode.style.position = "relative";
-            toolNode.style.left = wallStyleLeft;
-            toolNode.style.top = wallStyleTop;
-            toolNode.style.width = "94%";
-            toolNode.style.height = "94%";
-            toolNode.style.border = "0.01em solid #010638";
-            toolNode.style.animation = "visit-node 1s ease-in";
-            toolNode.style.animationFillMode = "forwards";
+            cellNode.style.backgroundColor = "#1689FC";
+            cellNode.style.animation = "visit-node 1s linear";
+            cellNode.style.animationFillMode = "forwards";
 
             cellNode.appendChild(toolNode);
             break;
         case "path-node":
-            toolNode.style.position = "relative";
-            toolNode.style.left = wallStyleLeft;
-            toolNode.style.top = wallStyleTop;
-            toolNode.style.width = "100%";
-            toolNode.style.height = "100%";
-            toolNode.style.animation = "check-node 0.2s ease-in";
-            toolNode.style.animationFillMode = "forwards";
-
-            cellNode.appendChild(toolNode);
+            cellNode.style.backgroundColor = "#E67A14";
+            cellNode.style.animation = "check-node 1s linear";
+            cellNode.style.animationFillMode = "forwards";
             break;
     }
 }
@@ -797,6 +800,8 @@ export function ShowErrorMessage(message) {
     errorMessageContainer.style.display = "block";
 
     errorMessageParagraph.innerText = message;
+
+    setTimeout(function() { errorMessageContainer.style.display = "none"; }, 2500);
 }
 
 /**
@@ -813,4 +818,36 @@ export function ShowLeftMenuToggler() {
 export function HideLeftMenuToggler() {
     document.getElementById("leftMenuToggler").style.display = "none";
     togglerTriggered = false;
+}
+
+/**
+ * Because two of the cell borders ovelap the Right and Bottom boundary cells end up appearing
+ * larger. To account for that, this function reduces the boundary cell size after the grid is generated.
+ */
+export function AddGridBoundaryCellBorders() {
+    AddRightBoundaryCellBorder();
+    AddBottomBoundaryCellBorder();
+}
+
+/*
+ * Adds the right side border to the right boundary cells to complete the grid.
+ */
+function AddRightBoundaryCellBorder() {
+    for (let i = 0; i < gridRightBoundaryCells.length; i++) {
+        const cellId = gridRightBoundaryCells[i];
+        const cellElement = document.getElementById(`cell${cellId}`);
+        cellElement.style.borderRight = "var(--cell-border-width) solid #010638";
+    }
+}
+
+/*
+ * Adds the bottom side border to the bottom boundary cells to complete the grid.
+ */
+function AddBottomBoundaryCellBorder() {
+    for (let i = 0; i < gridBottomBoundaryCells.length; i++) {
+        const cellId = gridBottomBoundaryCells[i];
+        const cellElement = document.getElementById(`cell${cellId}`);
+
+        cellElement.style.borderBottom = "var(--cell-border-width) solid #010638";
+    }
 }

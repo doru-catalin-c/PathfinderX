@@ -437,26 +437,27 @@ body {
         visibility: hidden;
         width: 5rem;
         height: 2rem;
-        position: absolute;
-        left: 1.5rem;
-        top: -0.65rem;
+        position: relative;
+        transform: translateY(-50%);
+        left: 3rem;
+        top: -1rem;
     }
 
-.tooltip .tooltip-text {
-    visibility: hidden;
-    width: 6rem;
-    height: 1rem;
-    background-color: transparent;
-    color: #f2f2f2;
-    text-align: center;
-    border-radius: 0.2rem;
-    padding-bottom: 0.5rem;
-    position: absolute;
-    left: 1rem;
-    top: -0.1rem;
-    font-size: 0.7rem;
-    z-index: 1;
-}
+    .tooltip .tooltip-text {
+        visibility: hidden;
+        width: 6rem;
+        height: 1rem;
+        background-color: transparent;
+        color: #f2f2f2;
+        text-align: center;
+        border-radius: 0.2rem;
+        padding-bottom: 0.5rem;
+        position: absolute;
+        left: 2.5rem;
+        top: -1.5rem;
+        font-size: 0.7rem;
+        z-index: 1;
+    }
 /* ===================================== END Toolbox ===================================== */
 
 /* =====================================  Dashboard  ===================================== */
@@ -922,6 +923,10 @@ body {
         top: 1rem;
         transform: scale(1.3);
     }
+    .error-container {
+        top: 1rem;
+        transform: scale(1.3);
+    }
 }
 
 @media only screen and (min-width: 3000px) {
@@ -982,6 +987,11 @@ body {
         left: 2rem;
         top: 2rem;
         transform: scale(2);
+    }
+
+    .error-container {
+        top: 2rem;
+        transform: scale(1.5);
     }
 }
 

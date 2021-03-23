@@ -31,6 +31,7 @@
     }
 }
 
+/* Animates the wall when it's placed on the grid */
 @keyframes scale-wall {
     0% {
         transform: scale(0);
@@ -38,6 +39,8 @@
 
     100% {
         transform: scale(1);
+        box-sizing: border-box;
+        border: 1px solid #010638;
     }
 }
 
@@ -84,51 +87,61 @@
     }
 }
 
-/* Animates the shortest path found by Dijksra's Algorithm */
+/* Animates the path found by algorithms. */
 @keyframes check-node {
-    from {
-        transform: scale(0);
-    }
-
-    to {
-        transform: scale(1);
-        border-radius: 0;
-    }
-}
-
-/* Animates the nodes visited by Dijksra's Algorithm */
-@keyframes visit-node {
     0% {
-        transform: scale(0.1);
-        border-radius: 2rem;
+        background-color: #25DF04;
     }
 
-    25% {
-        background-color: #005AEB;
-        transform: scale(0.25);
-        border-radius: 2rem;
+    20% {
+        background-color: #8EE300;
     }
 
-    50% {
-        background-color: #104580;
-        transform: scale(0.5);
-        border-radius: 1.75rem;
+    40% {
+        background-color: #E0FF0B;
     }
 
-    75% {
-        background-color: #03fcd7;
-        transform: scale(0.75);
-        border-radius: 1.5rem;
+    60% {
+        background-color: #FFED0B;
+    }
+
+    80% {
+        background-color: #FFD50B;
     }
 
     100% {
-        background-color: #098FDD;
-        transform: scale(1);
-        border-radius: 0;
+        background-color: #E67A14;
     }
 }
 
-/* Animates the modal in*/
+/* Animates the nodes visited by algorithms */
+@keyframes visit-node {
+    0% {
+        background-color: #f2f2f2;
+    }
+
+    20% {
+        background-color: #03fcd7;
+    }
+
+    40% {
+        background-color: #1689FC;
+    }
+
+    60% {
+        background-color: #098FDD;
+    }
+
+    80% {
+        background-color: #005AEB;
+    }
+
+    100% {
+        background-color: #002EA8;
+    }
+}
+
+/* Animates the modal when it's loaded */
 @keyframes modal-in {
     from {
         background-color: rgba(0, 0, 0, 0);
