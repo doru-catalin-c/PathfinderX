@@ -3,8 +3,8 @@
     left: 50%;
     top: 30%;
     transform: translate(-50%, -50%);
-    width: 6rem;
-    height: 6rem;
+    width: 30%;
+    height: 30%;
 }
 
 .error-message-container {
@@ -78,16 +78,19 @@
         top: 20%;
     }
     .error-title {
-        font-size: 2.5rem;
-    }
-    .error-message {
-        font-size: 1.5rem;
+        margin-top: 0.5rem;
+        font-size: 2.2rem;
     }
 }
 
 @media only screen and (min-width: 600px) {
     .error-icon {
         top: 20%;
+    }
+
+    .error-title {
+        margin-top: 0.5rem;
+        font-size: 2.5rem;
     }
 }
 
