@@ -328,8 +328,8 @@ function SetNodeType(toolNode, toolClass, cellId, cellNode) {
             toolNode.style.left = wallStyleLeft;
             toolNode.style.top = wallStyleTop;
             toolNode.style.borderRadius = "0";
-            toolNode.style.width = `105%`;
-            toolNode.style.height = `105%`;
+            toolNode.style.width = `106%`;
+            toolNode.style.height = `107%`;
             toolNode.style.animation = "scale-wall 0.2s ease-in";
 
             cellNode.appendChild(toolNode);

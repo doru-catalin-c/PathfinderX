@@ -57,7 +57,7 @@
 
 @media only screen and (min-width: 900px) {
     :root {
-        --grid-wall-left: -0.8px;
+        --grid-wall-left: -1px;
         --grid-wall-top: -0.8px;
         --grid-weight-left: 52.5%;
     }
@@ -72,6 +72,8 @@
 
 @media only screen and (min-width: 1200px) {
     :root {
+        --start-end-node-left: 52%;
+        --start-end-node-top: 53.45%;
         --grid-wall-left: -0.5px;
         --grid-wall-top: -1px;
         --grid-weight-left: 53.2%;
