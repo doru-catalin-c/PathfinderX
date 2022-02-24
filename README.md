@@ -46,18 +46,8 @@ I got the idea from <a href="https://www.youtube.com/watch?v=msttfIHHkak" target
 * HTML
 * CSS
 * JavaScript ECMAScript 2015
-* SVG
 
 #### Back-End
-* C#
+* C# 
 
-<!-- USAGE EXAMPLES -->
-## Usage
-Check <a href="https://www.doru-catalin.com/">my portfolio</a> for a preview to see how this is going to work. A short guide will be added once the project is complete.
 
-<!-- CONTACT -->
-## Contact
-
-Doru - Catalin Circota - https://www.doru-catalin.com/ - contact@doru-catalin.com
-
-Project Link: [https://github.com/doru-catalin-c/PathfinderX/](https://github.com/doru-catalin-c/PathfinderX/)
